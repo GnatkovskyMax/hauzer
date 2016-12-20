@@ -1,6 +1,7 @@
 <?php $menu = [
     [ 'label' => 'Главная',
        'url' => '/main/index',
+        'children' => 'kkk',
  ],
     [ 'label' => 'Каталог',
         'url' => '/manual/catalogs',

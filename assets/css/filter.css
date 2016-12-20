@@ -278,6 +278,6 @@ select{
     top:0;
     left:50%;
     transform:translateX(-50%);
-    z-index: 22222;
+    z-index: 22;
     width:100%;
 }
