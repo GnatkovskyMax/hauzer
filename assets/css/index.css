@@ -1,0 +1,16 @@
+.descriptionHauzez h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.descriptionHauzez{
+    width: 82%;
+    margin: 0 auto;
+}
+
+.offer {
+    background: #FF945E;
+    color: white;
+    font-size: 46px;
+    text-align: center;
+}

@@ -1,0 +1,264 @@
+body{
+    background: #F3F3F3;
+    font-style: italic;
+}
+
+.wrap-slider{
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+}
+
+.wrap-slider img{
+    width: 100%;
+
+}
+
+/*// .block {*/
+   /*// 	font-size: 15px;*/
+   /*//     background: green;*/
+   /*//     border-radius: 10px;*/
+   /*//     padding: 20px;*/
+   /*//   	position: relative;*/
+   /*//     color: #fff;*/
+   /*// }*/
+
+.slider-block{
+    position: relative;
+}
+
+.slider-block1{
+    position: relative;
+}
+
+.block {
+    width: 508px;
+    height: 186px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 315px;
+    left: 300px;
+    padding: 20px;
+}
+
+.block a{
+    position: absolute;
+    left:404px;
+    top: 146px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background: #FF945E;
+}
+
+.vip-description{
+    width: 70%;
+}
+
+.price-vip{
+    width: 29%;
+}
+
+.vip-description h1, .vip-description p{
+    font-family: 'Roboto Regular', arial;
+    font-weight: 500;
+}
+
+.vip-description p{
+    font-size: 13px;
+    margin: 5px 13px;
+}
+
+.block h1{
+    font-size: 25px;
+    color: #00AEEF;
+    margin: 11px;
+}
+
+.vip-adres{
+    color: #7D7D7D;
+}
+
+.price-vip{
+    vertical-align: top;
+    text-align: right;
+}
+
+.price-vip p{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.price-vip span{
+    font-size: 14px;
+    margin: 0;
+    font-weight: 900;
+}
+
+/*// .arrow-wrap{*/
+   /*// 	width: 100px;*/
+   /*// 	height: 100px;*/
+   /*// 	background: #FF945E;*/
+   /*// }*/
+
+/*// .arrow{*/
+   /*//   width: 0px;*/
+   /*//   height: 0px;*/
+   /*//   border: 50px solid transparent;*/
+   /*//   border-top-color: red;*/
+   /*//   margin: 0;*/
+   /*//   padding: 0;*/
+   /*//   float: left;*/
+   /*// }*/
+/*// .arrow:before{*/
+   /*//   content:'';*/
+   /*//   width: 0px;*/
+   /*//   height: 0px;*/
+   /*//   border: 30px solid transparent;*/
+   /*//   border-top-color: #FF945E;*/
+   /*//   display: inline-block;*/
+   /*//   -webkit-transform: translate(-30px, -50px);*/
+   /*// }*/
+/*// .arrow.left{*/
+   /*//   transform: rotate(90deg) translate(0px, 25px);*/
+   /*//   -webkit-transform: rotate(90deg) translate(0px, 25px);*/
+   /*//   -moz-transform: rotate(90deg) translate(0px, 25px);*/
+   /*//   -o-transform: rotate(90deg) translate(0px, 25px);*/
+   /*//   -ms-transform: rotate(90deg) translate(0px, 25px);*/
+   /*// }*/
+/*// .arrow.right{*/
+   /*//   transform: rotate(270deg) translate(0px, 25px);*/
+   /*//   -webkit-transform: rotate(270deg) translate(0px, 25px);*/
+   /*//   -moz-transform: rotate(270deg) translate(0px, 25px);*/
+   /*//   -o-transform: rotate(270deg) translate(0px, 25px);*/
+   /*//   -ms-transform: rotate(270deg) translate(0px, 25px);*/
+   /*// }*/
+
+/*// .prev {*/
+   /*//     background: green;*/
+   /*//     border-radius: 10px;*/
+   /*//     padding: 20px;*/
+   /*//     position: relative;*/
+   /*//     color: #fff;*/
+   /*// }*/
+
+/*// .prev::after {*/
+   /*//     content: '';*/
+   /*//     position: absolute;*/
+   /*//     left: 20px; bottom: -20px;*/
+   /*//    	border: 20px solid transparent;*/
+   /*//    	border-left: 20px solid green;*/
+   /*//    }*/
+
+.disp{
+    display: inline-block;
+}
+
+main{
+    text-align: center;
+}
+
+.wrap-catalog{
+    width: 75%;
+    text-align: left;
+}
+
+.section{
+    width: 28%;
+    height: 220px;
+    margin-right: 4%;
+    margin-bottom: 5%;
+}
+
+.el-background{
+    width: 100%;
+    padding: 3%;
+    background: white;
+}
+
+.section:before{
+    margin-right: 0;
+}
+
+.element-shadow{
+    transition:  box-shadow 1s;
+    background: white;
+}
+
+.element-shadow:hover{
+    box-shadow: 19px 19px 13px gray;
+}
+
+.section h1{
+    margin: 0;
+    font-size: 16px;
+}
+
+.section img{
+    width: 100%;
+    height: 100%;
+}
+
+.section a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.position{
+    width: 100%;
+    background: white;
+    text-align: left;
+}
+
+.personal{
+    text-align: center;
+}
+
+.personal h1, .offers{
+//background: #F06F33;
+    background: #FF945E;
+    color: white;
+    font-size: 46px;
+
+}
+
+.info-agents{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    width: 18%;
+    background: #DDDDDD;
+    margin-right: 1%;
+}
+
+.info-agents:before{
+    margin-right: 0;
+}
+
+.info-agents h2{
+    text-align: center;
+}
+
+.info-agents img{
+    border-radius: 50%;
+}
+
+.info h3{
+    margin: 0;
+}
+
+/*.info{*/
+    /*vertical-align: top;*/
+    /*margin-left: 5%;*/
+/*}*/
+
+
+
+
+
+
+
+
+
