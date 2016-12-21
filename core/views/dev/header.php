@@ -13,11 +13,14 @@
 	<link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="/assets/css/filter.css">
+    <link rel="stylesheet" href="/assets/css/news.css">
 	<link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="/assets/css/styl.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="/css/ion.rangeSlider.skinFlat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
 <div class='header'>

@@ -38,6 +38,11 @@
      }
 
      function getIdSegment($num){
-         $sql = "SELECT `basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number` FROM `objects` WHERE objects.id = '$num';";
+         $sql = "SELECT `id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number` FROM `objects` WHERE objects.id = '$num';";
          return selectData($sql);
      }
+
+function similarObject($cityOb, $roomOb, $priceOb, $IdOb){
+    $sql =  "SELECT `id`,`city`,`street`,`house_number`,`price`,`rooms`,`total_area` FROM `objects` WHERE objects.price BETWEEN $priceOb*0.1 AND $priceOb*15 AND objects.service = 'аренда' AND objects.rooms = $roomOb AND  objects.city ='$cityOb' AND objects.id NOT IN ($IdOb);";
+    return selectData($sql);
+}

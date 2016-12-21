@@ -6,6 +6,7 @@
     require_once 'core/models/category.php';
     require_once 'core/models/object.php';
     require_once 'core/views/dev/header.php';
+    require_once 'core/models/news.php';
     /*$url = $_GET['url'];
 
     $urlSegments = explode('/', $url);

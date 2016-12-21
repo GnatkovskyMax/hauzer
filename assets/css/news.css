@@ -1,0 +1,31 @@
+.wrapImgNews img, .wrapImgPost img{
+    width: 100%;
+}
+
+.wrapImgNews{
+    width: 17%;
+}
+
+.wrapText{
+    vertical-align: top;
+    width: 80%;
+}
+
+
+
+.wrapText h2{
+    margin: 0;
+    font-size: 24px;
+}
+
+.sectionNews{
+    width: 87%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.wrapImgPost{
+    width: 30%;
+    float: left;
+    margin: 0 10px 5px 0;
+}

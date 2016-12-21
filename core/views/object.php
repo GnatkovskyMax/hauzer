@@ -2,36 +2,37 @@
 		<section class="catalog-wrap">
 			<div class="catalog-info-wrap disp">
 				<div class="catalog-wrap-head">
-					<h1><?=$data[0]['city'] ?> <?=$data[0]['district'] ?></h1>
+
+					<h1><?=$data['objects'][0]['city'] ?> <?=$data['objects'][0]['district'] ?></h1>
 					<h2><?=$data[0]['price'] ?></h2>
 				</div>
-				<p><?=$data[0]['basic_description'] ?></p>
+				<p><?=$data['objects'][0]['basic_description'] ?></p>
 				<table>
 					<caption>Характеристика</caption>
 					<tr class="tr-back">
 						<td>Адресс:</td>
-						<td>г.<?=$data[0]['city'] ?> ул. <?=$data[0]['street'] ?> <?=$data[0]['house_number'] ?> кв <?=$data[0]['apartament_number'] ?></td>
+						<td>г.<?=$data['objects'][0]['city'] ?> ул. <?=$data['objects'][0]['street'] ?> <?=$data['objects'][0]['house_number'] ?> кв <?=$data['objects'][0]['apartament_number'] ?></td>
 					</tr>
 					<tr>
 						<td>Стоимость за 1кв.м:</td>
-						<td><?=$data[0]['square_meter'] ?> грн.</td>
+						<td><?=$data['objects'][0]['square_meter'] ?> грн.</td>
 					</tr>
 					<tr class="tr-back">
 						<td>Количество комнат:</td>
-						<td><?=$data[0]['rooms'] ?></td>
+						<td><?=$data['objects'][0]['rooms'] ?></td>
 					</tr>
 					<tr>
 						<td>Общая площадь:</td>
-						<td><?=$data[0]['total_area'] ?> кв.м</td>
+						<td><?=$data['objects'][0]['total_area'] ?> кв.м</td>
 					</tr>
 					<tr class="tr-back">
 						<td>Жилая площадь:</td>
-						<td><?=$data[0]['area'] ?> кв.м</td>
+						<td><?=$data['objects'][0]['area'] ?> кв.м</td>
 					</tr>
 				</table>
 			</div>
 			<div class="catalog-img-wrap">
-				<div class="catalog-imgg slider-nav">
+				<div class="catalog-img slider-nav">
 					<div onClick='opendialog()'><img src="/assets/img/5.jpg"></div>
 					<div onClick='opendialog()'><img src="/assets/img/3.jpg"></div>
 					<div onClick='opendialog()'><img src="/assets/img/4.jpg"></div>
@@ -43,7 +44,7 @@
 							<span>Город улица дом</span>
 							<a class="close-dialog" href="javascript: closedialog()"></a>
 						</div>
-						<div class="catalog-imgg1">
+						<div class="catalog-img1">
 							<div><img src="/assets/img/5.jpg"></div>
 							<div><img src="/assets/img/3.jpg"></div>
 							<div><img src="/assets/img/4.jpg"></div>
@@ -80,6 +81,9 @@
 			<button class="butt">Отправить</button>
 		</form>
 	</section>
+    <?php
+    require 'dev/similarObjects.php';
+    ?>
 	<section class="info-agent">
 		<h2>Информация об агенете</h2>
 		<img class="disp" src="/assets/img/img_agents/2.png">
@@ -93,3 +97,4 @@
 	</section>
 
 	</main>
+
