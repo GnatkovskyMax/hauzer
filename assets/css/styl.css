@@ -177,7 +177,12 @@ main{
     background: white;
 }
 
-.section:before{
+.backgroundNews{
+    padding: 1%;
+    margin-bottom: 15px;
+}
+
+.section:before, .sectionPost:before{
     margin-right: 0;
 }
 
@@ -190,17 +195,21 @@ main{
     box-shadow: 19px 19px 13px gray;
 }
 
-.section h1{
+.section-similar{
+    width:20%;
+}
+
+.section h1, .section-similar h1{
     margin: 0;
     font-size: 16px;
 }
 
-.section img{
+.section img, .section-similar img{
     width: 100%;
     height: 100%;
 }
 
-.section a{
+.section a, .section-similar a, .sectionPost a{
     display: block;
     text-decoration: none;
     color: black;

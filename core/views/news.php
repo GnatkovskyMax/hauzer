@@ -1,10 +1,14 @@
-<div class="content  clearfix" id="news">
-    <div class="container">
-        <div class="news">
-            <h1>
-                News
-            </h1>
+<?php
+//require 'dev/header.php';
+require_once 'dev/filter.php';
 
-        </div>
-    </div>
-</div>
+?>
+<main>
+    <section class="sectionNews">
+        <h1>Новости и статьи</h1>
+            <?php
+            require_once 'dev/posts.php';
+            ?>
+
+    </section>
+</main>

@@ -8,7 +8,7 @@ footer
 
 <!--polzunok-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
 <script src="/assets/js/nav-xs.js"></script>
 <script src="/assets/js/select.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -21,17 +21,17 @@ footer
 <script src="/js/ion.rangeSlider.js"></script>
 <script src="/assets/js/polz.js">
 </script>
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function(){-->
+<!--        $('.wrap-slider').slick({-->
+<!--            autoplay: true,-->
+<!--            autoplaySpeed: 1500,-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
 <script type="text/javascript">
     $(document).ready(function(){
-        $('.wrap-slider').slick({
-            autoplay: true,
-            autoplaySpeed: 1500,
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.catalog-imgg').slick({
+        $('.catalog-img').slick({
             dots: true,
             autoplay: true,
             infinite: true,
@@ -40,7 +40,7 @@ footer
             cssEase: 'linear',
             arrows: false
         });
-        $('.catalog-imgg1').slick({
+        $('.catalog-img1').slick({
             dots: false,
             autoplay: false,
             infinite: true,
@@ -61,5 +61,3 @@ footer
         $("#dialog").fadeOut(); //плавное исчезание блока
     }
 </script>
-</body>
-</html>

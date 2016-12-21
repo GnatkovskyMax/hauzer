@@ -6,8 +6,15 @@
   function action_object(){
         $ElId = getUrlSegment(2);
         $El = mysqli_fetch_all(getIdSegment($ElId), MYSQLI_ASSOC);;
+        $cityOb = $El[0]['city'];
+        $roomOb = $El[0]['rooms'];
+        $priceOb = $El[0]['price'];
+        $IdOb = $El[0]['id'];
 
-        renderView ('object', $El );
+        $similarObjects = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
+        //var_dump($similarObjects);
+        renderView ('object', ['objects' => $El, 'similars' => $similarObjects] );
+
 //      $categoryName = getUrlSegment(2);
 //      if (is_null($categoryName)){               !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //          show404page();
@@ -75,9 +82,18 @@
       renderView('catalogs', ['objects' => $allObjectsRent, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop]);
       //var_dump($data['objectsData']);
   }
-  function action_news(){
-      renderView('news');
-  }
+function action_news ()
+{
+    $result = mysqli_fetch_all(findAllPosts(), MYSQLI_ASSOC);
+    // var_dump($result);
+    renderView('news', ['objects' => $result]);
+}
+
+function action_post (){
+    $ElId = getUrlSegment(2);
+    $result = mysqli_fetch_all(getIdNews($ElId ), MYSQLI_ASSOC);
+    renderView('post', ['objects' => $result]);
+}
 function action_about(){
     renderView('about');
 }
