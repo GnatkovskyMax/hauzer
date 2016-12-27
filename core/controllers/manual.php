@@ -39,14 +39,24 @@
 
   function action_catalogs ()
   {
-      $table = 'objects';
-      $serviceRent = 'аренда';
-      $serviceSale = 'продажа';
-      $serviceRentOfDays = 'аренда по суточно';
-      $allObjectsRent = mysqli_fetch_all(findAllFromTableRent($table, $serviceRent), MYSQLI_ASSOC);
-      $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale), MYSQLI_ASSOC);
-      $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays), MYSQLI_ASSOC);
-      $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+      if (count($_GET)>5){
+          $arr = array_slice($_GET, 2);
+
+          $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
+          renderView('catalogs', ['objects' => $objects]);
+      }else{
+          $table = 'objects';
+          $serviceRent = 'аренда';
+          $serviceSale = 'продажа';
+          $serviceRentOfDays = 'аренда по суточно';
+          $objects = mysqli_fetch_all(findAllFromTableRent($table, $serviceRent), MYSQLI_ASSOC);
+          $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale), MYSQLI_ASSOC);
+          $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays), MYSQLI_ASSOC);
+          $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+          renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects]);
+      }
+      //var_dump($a);
+      var_dump($_GET);
 //      $arrService = findService();
 //      $arrService = mysqli_fetch_all($arrService, MYSQLI_ASSOC);
 ////      echo '<pre>';
@@ -79,7 +89,7 @@
       //echo '<pre>';
       //var_dump($objectsData);
       //echo '</pre>';
-      renderView('catalogs', ['objects' => $allObjectsRent, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop]);
+//      renderView('catalogs', ['objects' => $allObjectsRent, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects]);
       //var_dump($data['objectsData']);
   }
 function action_news ()
@@ -96,4 +106,21 @@ function action_post (){
 }
 function action_about(){
     renderView('about');
+}
+
+//function objectsFromFilter(){
+//    $table = 'objects';
+//    $objects = mysqli_fetch_all(findAllFromTable($table), MYSQLI_ASSOC);
+//    var_dump($objects);
+//    renderView('index', ['objects' => $objects]);
+//}
+
+function SearchByFilter (){
+    if (count($_GET)>5){
+        $arr = array_slice($_GET, 2);
+        //var_dump($arr);
+        return $arr;
+       renderView('catalogs', $arr);
+//        $result = objectsOfFilter()
+    }
 }

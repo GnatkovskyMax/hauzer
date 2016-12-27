@@ -40,6 +40,7 @@
         //var_dump($table);
         $sql = "SELECT * FROM $table";
         //$a = selectData($sql);
-        //var_dump ($a);
+
         return selectData($sql);
     }
+

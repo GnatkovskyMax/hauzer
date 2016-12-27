@@ -1,46 +1,48 @@
+
 <div class="content  clearfix" id="filter">
         <div class="container">
-<form>
+<form method="get" action="/manual/catalogs">
     <div class="filter-line">
 
 			<div class="col-xs-2 visible-xs adv-xs adv">adv</div>
         <div class="col-xs-10 col-sm-5 col-md-7 col-lg-77 "><input type="text" placeholder="Enter an address"></div>
         <div class="fifty col-sm-7 col-md-5 col-lg-55">
         <div class="hidden-xs col-sm-2 select adva-wrapp">
-            <select name="raen" >
-                <option value="1">all</option>
-                <option value="12">Подольский</option>
-                <option value="45">Голосеевский</option>
-                <option value="8">Печерский</option>
-            </select>
+<!--            <select name="raen" >-->
+<!--                <option value="all">Все раены</option>-->
+<!--            --><?php
+//            require 'selectDistrict.php';
+//            ?>
+<!--            </select>-->
         </div>
         <div class="hidden-xs col-sm-2 select adva-wrapp"><select name="dom">
-                <option value="14">1 комната</option>
-                <option value="45">2 комната</option>
-                <option value="76">3 комната</option>
-                <option value="94">4 комната</option>
+                <option value="14">Все варианты</option>
+                <?php
+                require 'selectRooms.php';
+                ?>
             </select>
         </div>
         <div class="hidden-xs col-sm-2 adva-wrapp"><p class="advanced adv">advanced  </p></div>
-       <div class="col-sm-1 btn-wrapp"> <button class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>
+       <div class="col-sm-1 btn-wrapp"> <button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>
+
+
     </div>
     </div>
     <div class="dop-filter col-xs-12 col-md-12 clearfix" id="select">
-        <div  class="col-xs-6 col-sm-3 col-md-3 select" >
-            <select name="city" >
-                <option value="1">Город</option>
-                <option value="2">Киев</option>
-                <option value="3">Харьков</option>
-                <option value="4">Львов</option>
+        <div  class="col-xs-6 col-sm-3 col-md-3 select">
+            <select name="city">
+                <?php
+                require 'selectCity.php';
+                ?>
             </select>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3 select" >
             <select name="raen">
-                <option value="1">Все раены</option>
-                <option value="2">Подольский</option>
-                <option value="3">Шевченковский</option>
-                <option value="4">Оболонь</option>
-                <option value="5">Днепровский</option>
+                <option value="all">Все варианты</option>
+                <?php
+                require 'selectDistrict.php';
+                ?>
+
             </select>
 
         </div>
@@ -55,19 +57,21 @@
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3 select">
             <select name="room">
-                <option value="1">1-комнатные</option>
-                <option value="2">2-комнатные</option>
-                <option value="3">3-комнатные</option>
+                <option value="all">Все варианты</option>
+                <?php
+                require 'selectRooms.php';
+                ?>
             </select>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 polz">
-                <input type="text" id="range" value="" name="range" />
+                <input type="text" id="range" value="" name="range" min="100" max="1000"/>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 polz polz1">
-                <input type="text" id="sq_m" value="" name="sq_m" />
+                <input type="text" id="sq_m" value="" name="sq_m" min="2222"/>
         </div>
     </div>
 
 </form>
  </div>
     </div>
+
