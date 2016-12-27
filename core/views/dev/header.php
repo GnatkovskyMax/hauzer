@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="/assets/css/slider.css">
 	<link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/map.css">
 	<link rel="stylesheet" href="/assets/css/filter.css">
     <link rel="stylesheet" href="/assets/css/news.css">
 	<link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick.css">
@@ -35,7 +36,7 @@ HOUZEZ
 	<div></div>
 </div>
 </div>
-	<span class="col-xs-5 col-xs-pull-7 col-md-2 col-md-push-8 col-lg-2 col-lg-push-8 hidden-sm">+38-063-943-78-05</span>
+	<span class=" phone col-xs-5 col-xs-pull-7 col-md-2 col-md-push-8 col-lg-2 col-lg-push-8 hidden-sm">+38-063-943-78-05</span>
 <?php require 'nav.php' ?>
 </div>
 </div>

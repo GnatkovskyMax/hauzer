@@ -1,5 +1,7 @@
 #filter{
-	background-color:lightblue;
+    position: relative;
+    z-index: 21;
+	background-color:#20DC9C;
 	padding:0 15px;
 }
 form *{
@@ -9,7 +11,7 @@ form *{
 }
 .filter-line{
     font-size: 1em;
-    position: relative;
+   // position: relative;
     background: white;
 	//border:1px solid white;
 	border-radius:5px;
@@ -153,9 +155,11 @@ select{
 	display:none;
 }
 .adv-xs{
+    vertical-align: middle;
     z-index: 10;
     cursor:pointer;
     max-width: 50px;
+    background: url('/assets/img/set-xs.png') no-repeat 5px center;
 }
 .adva-wrapp{
     width:120px !important;
@@ -167,6 +171,7 @@ select{
     left:10%;
     top:50%;
     transform:translateY(-50%);
+    cursor:pointer;
 }
 
 .advanced:after{
@@ -174,10 +179,11 @@ select{
     position: absolute;
     width: 24px;
     height: 26px;
-    right:20px;
+    right:15px;
     top:50%;
+    cursor:pointer;
     transform:translateY(-50%);
-    /*background: url('/assets/img/adv.png') no-repeat;*/
+   background: url('/assets/img/set.png') no-repeat;
     background-size: 23px 23px;
 }
 .btn-wrapp, .adva-wrapp{
@@ -192,16 +198,17 @@ select{
     right:0;
     width:50px;
 }
-.btn-wrapp:hover{
-    transform:scale(1.1);
-}
+/*.btn-wrapp:hover{*/
+    /*transform:scale(1.1);*/
+/*}*/
 .btn-wrapp .icon-search{
-/*background: url('../icon.jpg')no-repeat 6px 2px ;*/
+background: url('/assets/img/ser.png')no-repeat center center ;
     display:block;
     width:100%;
     height:100%;
-    border-radius:100%;
-    background-size: 43px 43px ;
+    //border-radius:100%;
+    //background-size: 43px 43px ;
+
 }
 .fifty{
     height:100%;

@@ -1,10 +1,11 @@
 <?php $menu = [
     [ 'label' => 'Главная',
        'url' => '/main/index',
-        'children' => 'kkk',
  ],
     [ 'label' => 'Каталог',
         'url' => '/manual/catalogs',
+        'children' => ['Аренда','Продажа','Аренда посуточно'
+        ],
     ],
   [ 'label' => 'Новости',
        'url' => '/manual/news',
