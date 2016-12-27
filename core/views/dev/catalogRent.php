@@ -7,7 +7,7 @@
             <section class="section disp">
                 <div class="disp el-background">
                     <a class="element-shadow" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>">
-                        <img src="../../../assets/img/header2.png" >
+                        <img src="/assets/img/header2.jpg" >
                         <div class="position">
                             <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>
                             <table>

@@ -4,16 +4,25 @@
 <form method="get" action="/manual/catalogs">
     <div class="filter-line">
 
-			<div class="col-xs-2 visible-xs adv-xs adv">adv</div>
+			<div class="col-xs-2 visible-xs adv-xs adv"></div>
         <div class="col-xs-10 col-sm-5 col-md-7 col-lg-77 "><input type="text" placeholder="Enter an address"></div>
         <div class="fifty col-sm-7 col-md-5 col-lg-55">
         <div class="hidden-xs col-sm-2 select adva-wrapp">
+<<<<<<< HEAD
 <!--            <select name="raen" >-->
 <!--                <option value="all">Все раены</option>-->
 <!--            --><?php
 //            require 'selectDistrict.php';
 //            ?>
 <!--            </select>-->
+=======
+            <select name="raen" >
+                <option value="1">Все районы</option>
+                <option value="12">Подольский</option>
+                <option value="45">Голосеевский</option>
+                <option value="8">Печерский</option>
+            </select>
+>>>>>>> b9d749eab36effb2877f79592b96f1fe94f3e4eb
         </div>
         <div class="hidden-xs col-sm-2 select adva-wrapp"><select name="dom">
                 <option value="14">Все варианты</option>
@@ -22,10 +31,15 @@
                 ?>
             </select>
         </div>
+<<<<<<< HEAD
         <div class="hidden-xs col-sm-2 adva-wrapp"><p class="advanced adv">advanced  </p></div>
        <div class="col-sm-1 btn-wrapp"> <button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>
 
 
+=======
+        <div class="hidden-xs col-sm-2 adva-wrapp"><p class="advanced adv">Настройки</p></div>
+       <div class="col-sm-1 btn-wrapp"> <button class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>
+>>>>>>> b9d749eab36effb2877f79592b96f1fe94f3e4eb
     </div>
     </div>
     <div class="dop-filter col-xs-12 col-md-12 clearfix" id="select">

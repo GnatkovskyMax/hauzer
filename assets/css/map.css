@@ -1,0 +1,38 @@
+section.map{
+    position:relative;
+    padding:10px 0;
+}
+div.opacity{
+    z-index: 20;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:block;
+    background:rgba(32,220,156,.4);
+}
+div.visible-map{
+    display:none;
+}
+.show-hide{
+    border-radius:5px;
+    z-index:21;
+    width:50px;
+    height:50px;
+    position:absolute;
+    top: 75px;
+    right:50px;
+    background:url('/assets/img/eye.png') center center ;
+}
+.cross-line{
+    margin-top:23px;
+    margin-left:-13px;
+    width:75px;
+    border:2px solid red;
+    transform:rotateZ(45deg);
+    display:none;
+}
+.cross-line-show{
+    display:block;
+}
