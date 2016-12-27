@@ -17,7 +17,7 @@ footer
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2TDPstV1bs-VaLgxHQ1sK8sK1nf6cgnk&callback=initMap" async defer></script>
 <script type="text/javascript" src="/assets/js/maps.js"></script>
 
-<script src="/js/jquery-1.12.3.min.js"></script>
+<!--<script src="/js/jquery-1.12.3.min.js"></script>-->
 <script src="/js/ion.rangeSlider.js"></script>
 <script src="/assets/js/polz.js">
 </script>
