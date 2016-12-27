@@ -1,3 +1,10 @@
+// $('.opacity').on('click',function(){
+//     $('.opacity').addClass('visible-map');
+// });
+$('.show-hide').on('click',function(){
+    $('.opacity').toggle();
+    $('.cross-line').toggle();
+});
 function initMap() {
     var myLatlng = new google.maps.LatLng(-20.397, 150.644);
     var myOptions = {

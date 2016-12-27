@@ -1,3 +1,11 @@
+
+body *{
+    font-family: Verdana !important;
+
+}
+body{
+    background: white !important;
+}
 .descriptionHauzez h1{
     text-align: center;
     border-bottom: 1px solid black;
@@ -9,8 +17,9 @@
 }
 
 .offer {
-    background: #FF945E;
-    color: white;
+    background:orange;
+    color:white;
+
     font-size: 46px;
     text-align: center;
 }
