@@ -3,6 +3,7 @@ section.map{
     padding:10px 0;
 }
 div.opacity{
+    transition:all 1s ease;
     z-index: 20;
     position:absolute;
     top:0;

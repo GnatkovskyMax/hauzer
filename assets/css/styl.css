@@ -165,17 +165,12 @@ main{
 }
 
 .section{
-    width: 28%;
-    height: 220px;
-    margin-right: 4%;
-    margin-bottom: 5%;
+    /*width: 28%;*/
+    /*height: 220px;*/
+    /*margin-right: 4%;*/
+    /*margin-bottom: 5%;*/
 }
 
-.el-background{
-    width: 100%;
-    padding: 3%;
-    background: white;
-}
 
 .backgroundNews{
     padding: 1%;
@@ -214,10 +209,16 @@ main{
     text-decoration: none;
     color: black;
 }
-
+.img-wrapp{
+    position: relative;
+    padding:2px;
+}
 .position{
+    top:0;
+    left:0;
+    position:absolute;
     width: 100%;
-    background: white;
+    /*background: white;*/
     text-align: left;
 }
 

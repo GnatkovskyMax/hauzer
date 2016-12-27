@@ -1,11 +1,13 @@
+
+<section class="section col-md-7">
 <?php
 for ($i = 0; $i < count($data['objectsRent']); $i++):
     ?>
 
 
-    <section class="section disp">
-        <div class="disp el-background">
-            <a class="element-shadow" href="/manual/object/<?= $data['objectsRent'][$i]{'id'} ?>">
+
+        <div class="img-wrapp col-md-4">
+            <a class="" href="/manual/object/<?= $data['objectsRent'][$i]{'id'} ?>"><!--element-shadow-->
                 <img src="/assets/img/header2.jpg" >
                 <div class="position">
                     <h1><?= $data['objectsRent'][$i]{'city'}?> &nbsp; <?=$data['objectsRent'][$i]['street']?> &nbsp; <?=$data['objectsRent'][$i]{'house_number'} ?> </h1>
@@ -26,10 +28,9 @@ for ($i = 0; $i < count($data['objectsRent']); $i++):
                 </div>
             </a>
         </div>
+<?php endfor; ?>
     </section>
 
 
-<?php endfor; ?>
 
-<?php
 
