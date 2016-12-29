@@ -29,7 +29,7 @@ form *{
 }
 .filter-line button{
     padding:0;
-	width:100%;
+	width:101%;
 	height:30px;
 	background: none;
 }
@@ -186,9 +186,11 @@ select{
    background: url('/assets/img/set.png') no-repeat;
     background-size: 23px 23px;
 }
+.adva-wrapp.border-left{
+    border-left:1px solid orange;
+}
 .btn-wrapp, .adva-wrapp{
     padding:0;
-
 }
 .btn-wrapp{
     transition:all 2s ease;
@@ -202,6 +204,7 @@ select{
     /*transform:scale(1.1);*/
 /*}*/
 .btn-wrapp .icon-search{
+border-radius:4px;
 background: url('/assets/img/ser.png')no-repeat center center ;
     display:block;
     width:100%;
@@ -210,7 +213,11 @@ background: url('/assets/img/ser.png')no-repeat center center ;
     //background-size: 43px 43px ;
 
 }
+.icon-search:active{
+    box-shadow: inset 1px 1px 10px grey;
+}
 .fifty{
+    margin-right:-2px;
     height:100%;
     position:relative;
 }

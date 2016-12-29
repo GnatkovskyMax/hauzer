@@ -15,6 +15,7 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), myOptions);
     var myLat = $('#dbMyLatLng').children();
     var markers = [];
+    var id = 25;
     for (var i = 0; i < myLat.length; i++) {
         // var contentString = '<div id="content">'+myLat.eq(i).text().split(',')[2]+'</div>';
         // var infowindow = new google.maps.InfoWindow({
@@ -26,7 +27,7 @@ function initMap() {
         var lng = parseFloat(lat_Lng[1]);
         var image = '/assets/img/lll.png';
         var marker = new google.maps.Marker({
-            draggable: true,
+            draggable: false,
             animation: google.maps.Animation.DROP,
             position: {'lat' : lat, 'lng' : lng},
             title: lat_Lng[2],
@@ -35,8 +36,8 @@ function initMap() {
         });
         markers.push(marker);
         var info = '<div id="info-wrapp">' +
-            '<div><a href="/main/index">jjj</a></div>'+
-            '<div>' +
+            '<div><a href="/main/index/'+id+'">jjj</a></div>'+
+            '<div class="marker-info">' +
             '<p>'+lat_Lng[2]+'</p>' +
             '<p>'+lat_Lng[2]+'</p>' +
             '<p>'+lat_Lng[2]+'</p>' +

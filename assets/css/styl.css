@@ -160,7 +160,6 @@ main{
 }
 
 .wrap-catalog{
-    width: 75%;
     text-align: left;
 }
 
@@ -213,15 +212,6 @@ main{
     position: relative;
     padding:2px;
 }
-.position{
-    top:0;
-    left:0;
-    position:absolute;
-    width: 100%;
-    /*background: white;*/
-    text-align: left;
-}
-
 .personal{
     text-align: center;
 }
