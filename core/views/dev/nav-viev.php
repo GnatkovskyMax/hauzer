@@ -10,7 +10,7 @@
             <?php if(!empty($m['children'])): ?>
                               <ul class="dop-link">
                          <?php foreach($m['children'] as $ch):  ?>
-                             <li><a href=""><?= $ch?></a><span class="hidden-xs">/</span></li>
+                             <li><a href="<?= $ch['url']?>"><?= $ch['label']?></a><span class="hidden-xs">/</span></li>
                          <?php endforeach;?>
                               </ul>
            <?php endif;

@@ -16,10 +16,11 @@ body{
     margin: 0 auto;
 }
 
-.offer {
+.offer, .offers {
     background:orange;
     color:white;
-
+margin:10px auto;
+    padding: 0;
     font-size: 46px;
     text-align: center;
 }

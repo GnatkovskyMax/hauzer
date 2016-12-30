@@ -53,6 +53,6 @@ function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
     }
 
     function objectsOfFilter($arr){
-        $sql = "SELECT `id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number`,`top`,`service`,`floor` FROM `objects` WHERE 1;";
+        $sql = "SELECT * FROM `objects` WHERE `district` LIKE \"%цЕ%\" AND `city` LIKE \"%Кие%\" ;";
         return selectData($sql);
     }

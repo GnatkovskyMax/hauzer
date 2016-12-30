@@ -215,15 +215,6 @@ main{
 .personal{
     text-align: center;
 }
-
-.personal h1, .offers{
-//background: #F06F33;
-    background: #FF945E;
-    color: white;
-    font-size: 46px;
-
-}
-
 .info-agents{
     text-align: center;
     margin: 0 auto;

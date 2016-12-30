@@ -1,35 +1,28 @@
-<?php
-   for ($i = 0; $i < count($data['objects']); $i++):
-?>
-
-
-
-            <section class="section disp">
-                <div class="disp el-background">
-                    <a class="element-shadow" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>">
+<section class="section">
+    <div class="container">
+        <div class="col-md-12">
+            <?php
+            for ($i = 0; $i < count($data['objects']); $i++):
+                ?>
+                <div class="img-wrapp col-md-3">
+                    <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
                         <img src="/assets/img/header2.jpg" >
-                        <div class="position">
-                            <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>
-                            <table>
-                                <tr>
-                                    <td>Стоимость:</td>
-                                     <td><?= $data['objects'][$i]['price']?> </td>
-                                </tr>
-                                <tr>
-                                    <td>Количество комнат:</td>
-                                    <td><?= $data['objects'][$i]['rooms']?></td>
-                                </tr>
-                                <tr>
-                                    <td>Общая площадь:</td>
-                                    <td><?= $data['objects'][$i]['square_meter']?></td>
-                                </tr>
-                            </table>
+                        <div class="position ">
+                            <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objectsRent'][$i]['street']?> &nbsp; <?=$data['objectsRent'][$i]{'house_number'} ?> </h1>
+                            <p>
+                                Стоимость:<?= $data['objects'][$i]['price']?>
+                            </p>
+                            <p>
+                                Количество комнат:<?= $data['objects'][$i]['rooms']?>
+                            </p>
+                            <p>
+                                Общая площадь:<?= $data['objects'][$i]['square_meter']?>
+                            </p>
                         </div>
                     </a>
                 </div>
-            </section>
-
-
-<?php endfor; ?>
-
+            <?php endfor; ?>
+        </div>
+    </div>
+</section>
 

@@ -40,8 +40,8 @@
   function action_catalogs ()
   {
       if (count($_GET)>5){
-          $arr = array_slice($_GET, 2);
-
+          $arr = array_slice($_GET, 1);
+var_dump($arr);
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           renderView('catalogs', ['objects' => $objects]);
       }else{
@@ -53,6 +53,7 @@
           $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale), MYSQLI_ASSOC);
           $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+
           renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects]);
       }
       //var_dump($a);
