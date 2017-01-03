@@ -1,11 +1,16 @@
-
 <div class="content  clearfix" id="filter">
         <div class="container">
 <form method="get" action="/manual/catalogs">
     <div class="filter-line">
-
 			<div class="col-xs-2 visible-xs adv-xs adv"></div>
-        <div class="col-xs-10 col-sm-5 col-md-7 col-lg-77 "><input type="text" placeholder="Enter an address"></div>
+        <div class="col-xs-8 col-sm-5 col-md-7 col-lg-77 input_parent">
+            <div class="visible-direct-inputs"><span>^</span></div>
+<!--            <div class="direct-inputs">-->
+<!--                <div id="search-id">Id</div><div id="search-address">Адрес</div>-->
+<!--            </div>-->
+            <input type="text" name="search-address" placeholder="Введите адрес" class="filter-line-input active-input">
+            <input type="text" name="search-id" placeholder="Номер объекта" class="filter-line-input">
+        </div>
         <div class="fifty col-sm-7 col-md-5 col-lg-55">
         <div class="hidden-xs col-sm-2 select adva-wrapp">
 <!--            <select name="raen" >-->
@@ -34,11 +39,9 @@
                 ?>
             </select>
         </div>
-<!--        <div class="hidden-xs col-sm-2 adva-wrapp"><p class="advanced adv">advanced  </p></div>-->
-<!--       <div class="col-sm-1 btn-wrapp"> <button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>-->
-       <div class="col-sm-1 btn-wrapp"> <button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>
+       <div class="col-sm-1 btn-wrapp"><button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs go-xs">Go</span></button></div>
         <div class="hidden-xs col-sm-2 adva-wrapp border-left"><p class="advanced adv ">Настройки</p></div>
-       <div class="col-sm-1 btn-wrapp"> <button class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>
+<!--       <div class="col-sm-1 btn-wrapp"> <button class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>-->
     </div>
     </div>
     <div class="dop-filter col-xs-12 col-md-12 clearfix" id="select">

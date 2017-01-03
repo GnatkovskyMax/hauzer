@@ -1,4 +1,5 @@
 #filter{
+    overflow:hidden;
     position: relative;
     z-index: 21;
 	background-color:#20DC9C;
@@ -16,11 +17,6 @@ form *{
 	//border:1px solid white;
 	border-radius:5px;
     height:30px;
-}
-.filter-line input{
-    background: transparent;
-    outline:none;
-    margin-bottom:3px;
 }
 .filter-line .adv-xs{
 	height:100%;
@@ -42,11 +38,26 @@ form *{
 #filter .container{
 	padding:5px 0;
 }
-
-#filter input{
+#filter .input_parent{
+    height:100%;
+}
+#filter .input_parent input{
+    margin-left:-5px;
+    font-size:0.9em;
+    border-radius:5px;
+    outline:none;
+    background: white;
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:30px;
 	width:100%;
 	border:none;
-	height:30px;
+	height:100%;
+}
+.input_parent input::-webkit-input-placeholder {color:lightgrey;}
+#filter .input_parent input.active-input{
+    z-index: 15;
 }
 #filter li{
     height:45px;
@@ -155,6 +166,7 @@ select{
 	display:none;
 }
 .adv-xs{
+    margin-right:-10px;
     vertical-align: middle;
     z-index: 10;
     cursor:pointer;
@@ -190,9 +202,11 @@ select{
     border-left:1px solid orange;
 }
 .btn-wrapp, .adva-wrapp{
+
     padding:0;
 }
 .btn-wrapp{
+    z-index:15;
     transition:all 2s ease;
     border-radius:5px;
     position:absolute;
@@ -225,7 +239,60 @@ background: url('/assets/img/ser.png')no-repeat center center ;
     padding-top:5px ;
     height:40px ;
 }
+.go-xs{
+    color:#20DC9C;
+}
+.visible-direct-inputs{
+    position:relative;
+    font-size: 1.5em;
+}
+.visible-direct-inputs span{
+    z-index: 16;
+    cursor:pointer;
+    position:relative;
+    top:50%;
+   transform:translate(-50%);
+    display:inline-block;
+    transform:rotateZ(90deg);
+    color:#20DC9C;
+}
+.direct-inputs{
+    height:100%;
+    position:relative;
+    //z-index: 15;
+}
+.direct-inputs div{
+    display:inline-block;
+    //background:red;
+    color:white;
+    /*margin-left: -1px;*/
+    padding:3px !important;
+}
 @media (min-width:768px) {
+    .visible-direct-inputs{
+        position:absolute;
+
+    }
+    .visible-direct-inputs span{
+        left:5px;
+        top:7px;
+        position: relative;
+        color:#20DC9C;
+    }
+    #filter .input_parent input{
+        margin-left:0;
+        font-size:1em;
+        padding-left:32px;
+    }
+    .direct-inputs{
+        background: url('/assets/img/show-v.png') no-repeat left center;
+        border-radius:35%;
+        margin-left:-15px;
+        padding-left:15px !important;
+        height:100%;
+        position:absolute;
+        z-index: 0;
+    }
     #filter .dop-filter .polz{
         padding:5px 0 0 0;
         height:45px ;
