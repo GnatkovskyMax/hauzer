@@ -4,7 +4,7 @@ section.map{
 }
 div.opacity{
     transition:all 1s ease;
-    z-index: 20;
+    z-index: 3;
     position:absolute;
     top:0;
     left:0;

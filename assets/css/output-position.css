@@ -1,4 +1,5 @@
 .position{
+
     overflow:hidden;
     transition:height 1s ease;
     height:0;
@@ -17,4 +18,8 @@
 }
 .position.show{
     height:80px;
+}
+.show-scale{
+    z-index: 10;
+    transform:scale(1.15);   transition:all 1s ease;
 }

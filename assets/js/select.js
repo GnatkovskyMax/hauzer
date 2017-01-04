@@ -58,6 +58,10 @@ function scroll(){
     }
 
 }
+$('.visible-direct-inputs').on('click',function(){
+    $('.filter-line-input').val('');
+    $('.filter-line-input').toggleClass('active-input');
+})
 
 
 
