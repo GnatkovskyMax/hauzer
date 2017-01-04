@@ -6,10 +6,10 @@
         'url' => '/manual/catalogs',
         'children' => [
             [ 'label' => 'Аренда',
-                'url' => '/manual/catalogs',
+                'url' => '/manual/catalogs/rent',
             ],
             [ 'label' => 'Продажа',
-                'url' => '/main/index',
+                'url' => '/manual/catalogs/sale',
             ],
             [ 'label' => 'Аренда посуточно',
                 'url' => '/main/index',

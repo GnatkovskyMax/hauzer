@@ -1,3 +1,6 @@
+<section>
+    <h1 class="offers">Наши предложения продажи</h1>
+    <div class="disp wrap-catalog">
 <?php
    for ($i = 0; $i < count($data['allObjectsSale']); $i++):
 ?>
@@ -32,4 +35,5 @@
 
 <?php endfor; ?>
 
-
+    </div>
+</section>

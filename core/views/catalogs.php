@@ -19,22 +19,21 @@ require_once 'dev/filter.php';
 </div>-->
 <main>
     <section>
-        <h1 class="offers">Наши предложения аренды</h1>
-        <div class="disp wrap-catalog ">
-    <?php
-    require 'dev/catalogRent.php';
-
-    ?>
-        </div>
-    </section>
-    <section>
-        <h1 class="offers">Наши предложения продажи</h1>
-        <div class="disp wrap-catalog">
-            <?php
-            require 'dev/catalogSale.php';
-            ?>
-                </div>
-            </section>
+        <?php
+        $catalogSale = 'dev/catalogSale.php';
+        $catalogRent = 'dev/catalogRent.php';
+        if (getUrlSegment(2) !== NULL){
+            if(getUrlSegment(2) == 'rent'){
+                require $catalogRent;
+            }
+            elseif (getUrlSegment(2) == 'sale'){
+                require $catalogSale;
+            }
+        }else{
+            require $catalogRent;
+            require $catalogSale;
+        }
+        ?>
     </section>
     <section class="personal">
         <h1>Наши сотрудники</h1>

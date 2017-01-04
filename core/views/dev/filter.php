@@ -1,11 +1,17 @@
-
 <div class="content  clearfix" id="filter">
         <div class="container">
 <form method="get" action="/manual/catalogs">
     <div class="filter-line">
 
 			<div class="col-xs-2 visible-xs adv-xs adv"></div>
-        <div class="col-xs-10 col-sm-5 col-md-7 col-lg-77 "><input type="text" placeholder="Enter an address"></div>
+        <div class="col-xs-10 col-sm-5 col-md-7 col-lg-77 input_parent">
+            <div class="direct-inputs">
+                <span id="search-id">id</span><br>
+                <span class="search-address">address</span>
+            </div>
+            <input type="text" name="search-address" placeholder="Введите адрес">
+            <input type="text" name="search-id" placeholder="Введите номер объекта">
+        </div>
         <div class="fifty col-sm-7 col-md-5 col-lg-55">
         <div class="hidden-xs col-sm-2 select adva-wrapp">
 <!--            <select name="raen" >-->

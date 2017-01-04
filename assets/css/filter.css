@@ -17,11 +17,6 @@ form *{
 	border-radius:5px;
     height:30px;
 }
-.filter-line input{
-    background: transparent;
-    outline:none;
-    margin-bottom:3px;
-}
 .filter-line .adv-xs{
 	height:100%;
 	text-align: center;
@@ -42,11 +37,20 @@ form *{
 #filter .container{
 	padding:5px 0;
 }
-
+#filter .input_parent{
+    height:100%;
+}
 #filter input{
+    border-radius:5px;
+    padding-left:15px;
+    outline:none;
+    background: white;
+    position:absolute;
+    top:0;
+    left:0;
 	width:100%;
 	border:none;
-	height:30px;
+	height:100%;
 }
 #filter li{
     height:45px;
@@ -226,6 +230,15 @@ background: url('/assets/img/ser.png')no-repeat center center ;
     height:40px ;
 }
 @media (min-width:768px) {
+    .direct-inputs{
+        background: url('/assets/img/show-v.png') no-repeat left center;
+        border-radius:35%;
+        margin-left:-15px;
+        padding-left:15px !important;
+        height:100%;
+        position:absolute;
+        z-index: 0;
+    }
     #filter .dop-filter .polz{
         padding:5px 0 0 0;
         height:45px ;
