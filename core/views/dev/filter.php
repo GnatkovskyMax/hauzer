@@ -39,7 +39,7 @@
                 ?>
             </select>
         </div>
-       <div class="col-sm-1 btn-wrapp"><button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs go-xs">Go</span></button></div>
+       <div class="col-sm-1 btn-wrapp"><button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs go-xs5869+">Go</span></button></div>
         <div class="hidden-xs col-sm-2 adva-wrapp border-left"><p class="advanced adv ">Настройки</p></div>
 <!--       <div class="col-sm-1 btn-wrapp"> <button class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs">Go</span></button></div>-->
     </div>
