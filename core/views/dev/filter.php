@@ -3,6 +3,13 @@
 <form method="get" action="/manual/catalogs">
     <div class="filter-line">
 			<div class="col-xs-2 visible-xs adv-xs adv"></div>
+        <div class="col-xs-10 col-sm-5 col-md-7 col-lg-77 input_parent">
+            <div class="direct-inputs">
+                <span id="search-id">id</span><br>
+                <span class="search-address">address</span>
+            </div>
+            <input type="text" name="search-address" placeholder="Введите адрес">
+            <input type="text" name="search-id" placeholder="Введите номер объекта">
         <div class="col-xs-8 col-sm-5 col-md-7 col-lg-77 input_parent">
             <div class="visible-direct-inputs"><span>^</span></div>
 <!--            <div class="direct-inputs">-->
@@ -21,9 +28,9 @@
 <!--            </select>-->
             <select name="raen" >
                 <option value="*">Все раены</option>
-<?php
-        require 'selectDistrict.php';
-?>
+                <?php
+                require 'selectDistrict.php';
+                ?>
   </select>
             <select name="raen" >
                 <option value="1">Все районы</option>
