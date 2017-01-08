@@ -17,18 +17,18 @@
 }
 
      function findAllFromTableRent($catId, $service){
-        $sql = "SELECT `id`,`square_meter`,`price`,`rooms`,`city`,`street`,`house_number`, `service` FROM $catId WHERE `service` = '$service';";
+        $sql = "SELECT `id`,`square_meter`,`price`,`rooms`,`city`,`street`,`house_number`, `service` , `img` , `img_object` FROM $catId WHERE `service` = '$service';";
         return selectData($sql);
 }
      /* function allObjects(){
         $allObjects = findAllFromTable($objects);
-        //var_dump($allObjects);
+        var_dump($allObjects);
         return $allObjects;
       }*/
 
 
     function findAllObjectTop(){
-        $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top` FROM `objects` WHERE objects.top = 'top';";
+        $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`, `img`, `basic_description` , `service` FROM `objects` WHERE objects.top = 'top';";
         return selectData($sql);
     }
 
@@ -38,13 +38,13 @@
      }
 
      function getIdSegment($num){
-         $sql = "SELECT `id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number` FROM `objects` WHERE objects.id = '$num';";
+         $sql = "SELECT `id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number`, `img` , `img_object` FROM `objects` WHERE objects.id = '$num';";
          return selectData($sql);
      }
 
 function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
 {
-    $sql = "SELECT `id`,`city`,`street`,`house_number`,`price`,`rooms`,`total_area` FROM `objects` WHERE objects.price BETWEEN $priceOb*0.1 AND $priceOb*15 AND objects.service = 'аренда' AND objects.rooms = $roomOb AND  objects.city ='$cityOb' AND objects.id NOT IN ($IdOb);";
+    $sql = "SELECT `id`,`city`,`street`,`house_number`,`price`,`rooms`,`total_area`, `img` , `img_object` FROM `objects` WHERE objects.price BETWEEN $priceOb*0.1 AND $priceOb*15 AND objects.service = 'аренда' AND objects.rooms = $roomOb AND  objects.city ='$cityOb' AND objects.id NOT IN ($IdOb);";
     return selectData($sql);
 }
     function findFromForm(){

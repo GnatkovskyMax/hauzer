@@ -32,8 +32,8 @@ body{
 }
 
 .block {
-    width: 508px;
-    height: 186px;
+    width: 514px;
+    height: 211px;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.6);
     top: 315px;
@@ -44,7 +44,7 @@ body{
 .block a{
     position: absolute;
     left:404px;
-    top: 146px;
+    top: 171px;
     padding: 10px 15px;
     text-decoration: none;
     color: white;
@@ -52,7 +52,7 @@ body{
 }
 
 .vip-description{
-    width: 70%;
+    width: 90%;
 }
 
 .price-vip{
@@ -63,10 +63,14 @@ body{
     font-family: 'Roboto Regular', arial;
     font-weight: 500;
 }
-
+.vip-description h2{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+}
 .vip-description p{
     font-size: 13px;
-    margin: 5px 13px;
+    margin: 5px 13px 5px 0px;
 }
 
 .block h1{
@@ -81,7 +85,7 @@ body{
 
 .price-vip{
     vertical-align: top;
-    text-align: right;
+    text-align: left;
 }
 
 .price-vip p{
@@ -244,8 +248,6 @@ main{
     /*vertical-align: top;*/
     /*margin-left: 5%;*/
 /*}*/
-
-
 
 
 

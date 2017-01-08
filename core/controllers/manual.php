@@ -12,7 +12,6 @@
         $IdOb = $El[0]['id'];
 
         $similarObjects = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
-        //var_dump($similarObjects);
         renderView ('object', ['objects' => $El, 'similars' => $similarObjects] );
 
 //      $categoryName = getUrlSegment(2);
@@ -41,7 +40,6 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
-var_dump($arr);
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           renderView('catalogs', ['objects' => $objects]);
       }else{
@@ -53,11 +51,13 @@ var_dump($arr);
           $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale), MYSQLI_ASSOC);
           $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-
+//          echo '<pre>';
+//          var_dump($allObjectsTop);
+//          echo '</pre>';
           renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects]);
       }
-      //var_dump($a);
-      var_dump($_GET);
+
+      //var_dump($_GET);
 //      $arrService = findService();
 //      $arrService = mysqli_fetch_all($arrService, MYSQLI_ASSOC);
 ////      echo '<pre>';

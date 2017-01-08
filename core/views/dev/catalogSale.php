@@ -3,14 +3,14 @@
     <div class="disp wrap-catalog">
 <?php
    for ($i = 0; $i < count($data['allObjectsSale']); $i++):
+//       echo '<pre>';
+//          var_dump($data['allObjectsSale']);
+//          echo '</pre>';
 ?>
-
-
-
             <section class="section disp">
                 <div class="disp el-background">
-                    <a class="element-shadow" href="../../../index.php">
-                        <img src="/assets/img/header2.png" >
+                    <a class="element-shadow" href="/manual/object/<?= $data['allObjectsSale'][$i]{'id'}?>">
+                        <img src="/assets/img/<?= $data['allObjectsSale'][$i]{'img'}?>.jpg" >
                         <div class="position">
                             <h1><?= $data['allObjectsSale'][$i]{'city'}?> &nbsp; <?=$data['allObjectsSale'][$i]['street']?> &nbsp; <?=$data['allObjectsSale'][$i]{'house_number'} ?> </h1>
                             <table>

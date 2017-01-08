@@ -4,14 +4,13 @@ require_once 'dev/filter.php';
 <!-- <div class="arrow-wrap"><div class="prev"></div></div>
 <div class="arrow right"></div> -->
 <section class="wrap-slider">
-    <div class="slider-block">
+<!--    <div class="slider-block">-->
 
         <?php
         require 'dev/catalogTop.php';
-
         ?>
 
-    </div>
+<!--    </div>-->
 </section>
 <!--<div class="prev"></div>
 

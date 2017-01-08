@@ -50,6 +50,10 @@
             cssEase: 'linear',
 
         });
+        $('.wrap-slider').slick({
+            autoplay: true,
+            autoplaySpeed: 1500,
+        });
     });
     $(document).ready(function(){
         $("#dialog").hide(); //скрываем окно при загрузке страница
