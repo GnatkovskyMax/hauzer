@@ -5,7 +5,7 @@ $status = $xml->status;
 $lat = $xml->result->geometry->location->lat;
 $lng = $xml->result->geometry->location->lng;
 ?>
-<div class="opacity"></div>
+<div class="opacity "></div>
 <div class="show-hide"><div class="cross-line"></div></div>
 <div id="dbMyLatLng" style="display:none">
     <p> <?= $lat?> , <?=$lng?> , m.</p>

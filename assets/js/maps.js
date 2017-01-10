@@ -36,6 +36,7 @@ function initMap() {
         });
         markers.push(marker);
         var info = '<div id="info-wrapp">' +
+            '<img src="phpto/'+id+'/'+photoName[0]+'.jpg">'+
             '<div><a href="/main/index/'+id+'">jjj</a></div>'+
             '<div class="marker-info">' +
             '<p>'+lat_Lng[2]+'</p>' +

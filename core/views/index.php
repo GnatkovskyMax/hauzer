@@ -3,7 +3,7 @@
 require_once 'dev/filter.php';
 ?>
 <main>
-    <section class="map">
+    <section class="map hidden-xs">
         <!--            <h1 class="offer">Объекты на карте</h1>-->
         <?php
         require_once 'dev/maps.php';
