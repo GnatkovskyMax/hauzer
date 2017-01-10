@@ -1,7 +1,7 @@
 <section>
     <h1 class="offers">Наши предложения аренды</h1>
     <div class="disp wrap-catalog ">
-<section class="section"3>
+<section class="section">
     <div class="container">
         <div class="col-md-12">
             <?php
