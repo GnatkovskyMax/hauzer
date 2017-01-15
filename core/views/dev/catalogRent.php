@@ -24,8 +24,15 @@
                         </div>
                     </a>
                 </div>
-            <?php endfor; ?>
+            <?php endfor;?>
         </div>
+        <?php
+     echo    $_GET['m'];
+     $btn= count($data['btnRent'])/2-1 ;
+        for ($i = 1; $i <= $btn; $i++):
+        ?>
+        <button class="load"><?=$i+1?></button>
+        <?php endfor;?>
     </div>
 </section>
     </div>

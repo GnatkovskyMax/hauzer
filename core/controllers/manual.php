@@ -43,18 +43,20 @@
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           renderView('catalogs', ['objects' => $objects]);
       }else{
+          $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $table = 'objects';
           $serviceRent = 'аренда';
           $serviceSale = 'продажа';
           $serviceRentOfDays = 'аренда по суточно';
-          $objects = mysqli_fetch_all(findAllFromTableRent($table, $serviceRent), MYSQLI_ASSOC);
-          $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale), MYSQLI_ASSOC);
-          $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays), MYSQLI_ASSOC);
+          $allObjectsRentForBtn = mysqli_fetch_all(findAllForBtn($table, $serviceRent), MYSQLI_ASSOC);
+          $objects = mysqli_fetch_all(findAllFromTableRent($table, $serviceRent,$m), MYSQLI_ASSOC);
+          $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale,$m), MYSQLI_ASSOC);
+          $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays,$m), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
 //          echo '<pre>';
 //          var_dump($allObjectsTop);
 //          echo '</pre>';
-          renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects]);
+          renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects,'btnRent'=>$allObjectsRentForBtn]);
       }
 
       //var_dump($_GET);
