@@ -1,8 +1,8 @@
 <?php
 $arr = array();
 $a = 0;
-for ($i = 0; $i < count($data['objectsFilter']); $i++){
-    $arr[$a] = $data['objectsFilter'][$i]['city'];
+for ($i = 0; $i < count($data['filter']); $i++){
+    $arr[$a] = $data['filter'][$i]['city'];
     $a ++;
 }
 array_unshift($arr, 'Киев');
@@ -11,6 +11,6 @@ for ($i = 0; $i < count($arrForm); $i++):
 
     ?>
 
-    <option  value="<?=$i ?>"  href="/main/index/<?= $i ?>"><?= $arrForm[$i]?></option>
+    <option  value="'<?=$arrForm[$i]?>'"  href="/main/index/<?= $i ?>"><?= $arrForm[$i]?></option>
 
 <?php endfor; ?>

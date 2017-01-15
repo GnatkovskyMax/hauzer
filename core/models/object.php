@@ -48,11 +48,13 @@ function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
     return selectData($sql);
 }
     function findFromForm(){
-        $sql = "SELECT `city`,`district`,`rooms`,`price`,`total_area` FROM `objects` WHERE 1;";
+        $sql = "SELECT `city`,`district`,`rooms`,`price`,`total_area`, `service` FROM `objects` WHERE 1;";
         return selectData($sql);
     }
 
     function objectsOfFilter($arr){
-        $sql = "SELECT * FROM `objects` WHERE `district` LIKE \"%цЕ%\" AND `city` LIKE \"%Кие%\" ;";
+        //var_dump($arr[district]);
+        $sql = "SELECT * FROM `objects` WHERE objects.district = $arr[district] AND objects.rooms = $arr[rooms] AND objects.city = $arr[city] AND objects.service = $arr[service];";
         return selectData($sql);
+
     }

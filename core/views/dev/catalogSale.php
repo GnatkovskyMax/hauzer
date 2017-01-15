@@ -1,25 +1,37 @@
 <section>
-    <h1 class="offers">Наши предложения аренды</h1>
+    <h1 class="offers">Наши предложения продажи</h1>
     <div class="disp wrap-catalog ">
         <section class="section">
             <div class="container">
                 <div class="col-md-12">
                     <?php
-                    for ($i = 0; $i < count($data['allObjectsSale']); $i++):
+//                    echo '<pre>';
+//                    var_dump($data['objectsFilter']);
+//                    var_dump($data['allObjectsSale']);
+//                    echo '</pre>';
+                    if($data['allObjectsSale'] !== NULL){
+                        $data['objects'] = $data['allObjectsSale'];
+                    }else{
+                        $data['objects'] = $data['objectsFilter'];
+                    }
+                    for ($i = 0; $i < count($data['objects']); $i++):
                         ?>
                         <div class="img-wrapp col-md-3">
-                            <a class="" href="/manual/object/<?= $data['allObjectsSale'][$i]{'id'} ?>"><!--element-shadow-->
-                                <img src="/assets/img/<?=$data['allObjectsSale'][$i]{'img'}?>.jpg" >
+                            <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
+                                <img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" >
                                 <div class="position show">
-                                    <h1><?= $data['allObjectsSale'][$i]{'city'}?> &nbsp; <?=$data['allObjectsSale'][$i]['street']?> &nbsp; <?=$data['allObjectsSale'][$i]{'house_number'} ?> </h1>
+                                    <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>
                                     <p>
-                                        Стоимость:<?= $data['allObjectsSale'][$i]['price']?>
+                                        <?= $data['objects'][$i]['service']?>
                                     </p>
                                     <p>
-                                        Количество комнат:<?= $data['allObjectsSale'][$i]['rooms']?>
+                                        Стоимость:<?= $data['objects'][$i]['price']?>
                                     </p>
                                     <p>
-                                        Общая площадь:<?= $data['allObjectsSale'][$i]['square_meter']?>
+                                        Количество комнат:<?= $data['objects'][$i]['rooms']?>
+                                    </p>
+                                    <p>
+                                        Общая площадь:<?= $data['objects'][$i]['square_meter']?>
                                     </p>
                                 </div>
                             </a>
