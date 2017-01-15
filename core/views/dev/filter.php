@@ -13,27 +13,29 @@
 <!--            <select name="raen" >-->
 <!--                <option value="all">Все раены</option>-->
 <!--            --><?php
-//            require 'selectDistrict.php';
-//            ?>
+//                   echo '<pre>';
+//            var_dump($data['objectsFilter']);
+//            echo '</pre>';
+////            ?>
 <!--            </select>-->
-            <select name="raen" >
-                <option value="*">Все раены</option>
-                <?php
-                require 'selectDistrict.php';
-                ?>
+<!--            <select name="district" >-->
+<!--                <option value="*">Все раены</option>-->
+<!--                --><?php
+//                require 'selectDistrict.php';
+//                ?>
   </select>
-            <select name="raen" >
-                <option value="1">Все районы</option>
-                <option value="12">Подольский</option>
-                <option value="45">Голосеевский</option>
-                <option value="8">Печерский</option>
-            </select>
+<!--            <select name="raen" >-->
+<!--                <option value="1">Все районы</option>-->
+<!--                <option value="12">Подольский</option>-->
+<!--                <option value="45">Голосеевский</option>-->
+<!--                <option value="8">Печерский</option>-->
+<!--            </select>-->
         </div>
         <div class="hidden-xs col-sm-2 select adva-wrapp"><select name="dom">
-                <option value="*">Все варианты</option>
-                <?php
-                require 'selectRooms.php';
-                ?>
+<!--                <option value="*">Все варианты</option>-->
+<!--                --><?php
+//                require 'selectRooms.php';
+//                ?>
             </select>
         </div>
        <div class="col-sm-1 btn-wrapp"><button href="/manual/catalogs" class="sub"><span class="hidden-xs icon-search"></span><span class="visible-xs go-xs5869+">Go</span></button></div>
@@ -50,8 +52,8 @@
             </select>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3 select" >
-            <select name="raen">
-                <option value="all">Все варианты</option>
+            <select name="district">
+                <option value = 'district'>Все районы</option>
                 <?php
                 require 'selectDistrict.php';
                 ?>
@@ -60,17 +62,15 @@
 
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3 select">
-            <select name="uarus">
-                <option value="1">Этаж</option>
-                <option value="2">1-й</option>
-                <option value="3">2-й</option>
-                <option value="4">3-й</option>
-                <option value="5">4-й</option>
+            <select name="service">
+                <option value="service">Аренда/Продажа</option>
+                <option value="'Аренда'">Аренда</option>
+                <option value="'Продажа'">Продажа</option>
             </select>
         </div>
         <div class="col-xs-6 col-sm-3 col-md-3 select">
-            <select name="room">
-                <option value="all">Все варианты</option>
+            <select name="rooms">
+                <option value="rooms">Количество комнат</option>
                 <?php
                 require 'selectRooms.php';
                 ?>

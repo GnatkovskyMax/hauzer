@@ -19,6 +19,7 @@ require_once 'dev/filter.php';
 <main>
     <section>
         <?php
+
         $catalogSale = 'dev/catalogSale.php';
         $catalogRent = 'dev/catalogRent.php';
         if (getUrlSegment(2) !== NULL){
@@ -28,10 +29,32 @@ require_once 'dev/filter.php';
             elseif (getUrlSegment(2) == 'sale'){
                 require $catalogSale;
             }
+        }elseif ($data['objectsFilter'] !== NULL){
+            for ($i = 0; $i < count($data['objectsFilter']); $i++) {
+//                echo '<pre>';
+//                var_dump($data['objectsFilter'][$i]);
+//                echo '</pre>';
+                if ($data['objectsFilter'][$i]['service'] == 'Аренда') {
+                    require $catalogRent;
+                }
+                if ($data['objectsFilter'][$i]['service'] == 'Продажа') {
+                    require $catalogSale;
+                }
+            }
         }else{
             require $catalogRent;
             require $catalogSale;
         }
+//        if ($data['objectsFilter'] !== NULL) {
+//            for ($i = 0; $i < count($data['objectsFilter']); $i++) {
+//                if ($data['objectsFilter'][$i]['service'] == 'аренда') {
+//                    require $catalogRent;
+//                }
+//                if ($data['objectsFilter'][$i]['service'] == 'продажа') {
+//                    require $catalogSale;
+//                }
+//            }
+//        }
         ?>
     </section>
     <section class="personal">

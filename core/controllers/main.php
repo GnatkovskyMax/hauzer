@@ -3,7 +3,7 @@
         $serviceRent = 'аренда';
         $serviceSale = 'Продажа';
 //        $objects = mysqli_fetch_all(findAllFromTable('objects'), MYSQLI_ASSOC);
-        $objects = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+        $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
 //        $arr = array();
 //        $a = 0;
 //        for ($i = 0; $i < count($objects); $i++){
@@ -30,7 +30,7 @@
 //        var_dump($arr);
         $topRent = mysqli_fetch_all(findAllObjectTopIndex($serviceRent), MYSQLI_ASSOC);
         $topSale = mysqli_fetch_all(findAllObjectTopIndex($serviceSale), MYSQLI_ASSOC);
-        renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'objectsFilter' => $objects]);
+        renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'filter' => $objectsFilter]);
     }
 
     function action_contact(){

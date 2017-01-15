@@ -40,8 +40,15 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
+//          $arr = array_diff($arr, array(''));
+//          echo '<pre>';
+//          var_dump($arr);
+//          echo '</pre>';
+
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
-          renderView('catalogs', ['objects' => $objects]);
+          $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+          $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+          renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $table = 'objects';
@@ -53,10 +60,12 @@
           $allObjectsSale = mysqli_fetch_all(findAllFromTableRent($table, $serviceSale,$m), MYSQLI_ASSOC);
           $allObjectsRentOfDays = mysqli_fetch_all(findAllFromTableRent($table, $serviceRentOfDays,$m), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+          $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
 //          echo '<pre>';
 //          var_dump($allObjectsTop);
 //          echo '</pre>';
-          renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects,'btnRent'=>$allObjectsRentForBtn]);
+
+          renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn ]);
       }
 
       //var_dump($_GET);
