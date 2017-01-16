@@ -36,11 +36,21 @@
 
 function load(){
     $('.load').on('click', function(){
-      var jm= +($(this).text());
+      var jm= +($(this).text())-1;
         $.get("/manual/catalogs",
             {m: jm}, function(data){
                 data = $(data);
                 $(".wrap-catalog.rent").html($('.wrap-catalog.rent', data).html());
+            });
+    });
+};
+function loadSale(){
+    $('.loadSale').on('click', function(){
+      var j= +($(this).text())-1;
+        $.get("/manual/catalogs",
+            {s: j}, function(data){
+                data = $(data);
+                $(".wrap-catalog.sale").html($('.wrap-catalog.sale', data).html());
             });
     });
 };

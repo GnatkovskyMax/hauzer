@@ -31,17 +31,16 @@
                 </div>
             <?php endfor;?>
         </div>
+        <div class="col-md-12 forBtn">
         <?php
-     echo    var_dump($_GET);
-     $btn= count($data['btnRent'])-1 ;
-        unset($_GET['m']);
-        echo    var_dump($_GET);
+        $btn= count($data['btnRent']) ;
         for ($i = 1; $i <= $btn; $i++):
         ?>
-        <button class="load" onmousemove="load()"><?=$i+1?></button>
+        <button class="load" onmousemove="load()"><?=$i?></button>
         <?php endfor;
 
         ?>
+        </div>
     </div>
 </section>
     </div>

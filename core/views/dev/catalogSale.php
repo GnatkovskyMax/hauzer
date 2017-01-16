@@ -1,6 +1,6 @@
 <section>
     <h1 class="offers">Наши предложения продажи</h1>
-    <div class="disp wrap-catalog ">
+    <div class="disp wrap-catalog sale">
         <section class="section">
             <div class="container">
                 <div class="col-md-12">
@@ -37,6 +37,16 @@
                             </a>
                         </div>
                     <?php endfor; ?>
+                    </div>
+                    <div class="col-md-12 forBtn">
+                     <?php
+        $btn= count($data['btnSale']) ;
+        for ($i = 1; $i <= $btn; $i++):
+        ?>
+        <button class="loadSale" onmousemove="loadSale()"><?=$i?></button>
+        <?php endfor;
+
+        ?>
                 </div>
             </div>
         </section>
