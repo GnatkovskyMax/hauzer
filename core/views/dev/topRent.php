@@ -24,8 +24,10 @@
                 </div>
             </a>
         </div>
-    <?php endfor; ?>
-         </div>
+    <?php endfor;
+     ?>
+     </div>
+
        </div>
     </section>
 

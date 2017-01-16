@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="/assets/css/filter.css">
     <link rel="stylesheet" href="/assets/css/news.css">
     <link rel="stylesheet" href="/assets/css/output-position.css">
+    <link rel="stylesheet" href="/assets/css/catalog.css">
 	<link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="/assets/css/styl.css">

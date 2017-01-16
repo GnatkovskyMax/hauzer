@@ -1,6 +1,6 @@
 <section>
     <h1 class="offers">Наши предложения аренды</h1>
-    <div class="disp wrap-catalog ">
+    <div class="disp wrap-catalog rent">
 <section class="section">
     <div class="container">
         <div class="col-md-12">
@@ -35,7 +35,17 @@
                         </div>
                     </a>
                 </div>
-            <?php endfor; ?>
+            <?php endfor;?>
+        </div>
+        <div class="col-md-12 forBtn">
+        <?php
+        $btn= count($data['btnRent']) ;
+        for ($i = 1; $i <= $btn; $i++):
+        ?>
+        <button class="load" onmousemove="load()"><?=$i?></button>
+        <?php endfor;
+
+        ?>
         </div>
     </div>
 </section>

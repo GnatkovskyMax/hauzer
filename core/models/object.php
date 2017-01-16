@@ -16,9 +16,12 @@
             return [];
         }
 }
-
-     function findAllFromTableRent($catId, $service){
-        $sql = "SELECT `id`,`square_meter`,`price`,`rooms`,`city`,`street`,`house_number`, `service` , `img` , `img_object` FROM $catId WHERE `service` = '$service';";
+     function findAllForBtn($catId, $service){
+         $sql = "SELECT * FROM $catId WHERE `service` = '$service';";
+         return selectData($sql);
+}
+     function findAllFromTableRent($catId, $service, $load){
+        $sql = "SELECT * FROM $catId WHERE `service` = '$service' ORDER BY id LIMIT $load, 1 ;";
         return selectData($sql);
 }
      /* function allObjects(){
@@ -29,7 +32,7 @@
 
 
     function findAllObjectTop(){
-        $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`, `img`, `basic_description` , `service` FROM `objects` WHERE objects.top = 'top';";
+        $sql = "SELECT * FROM `objects` WHERE objects.top = 'top';";
         return selectData($sql);
     }
 
