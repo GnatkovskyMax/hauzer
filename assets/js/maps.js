@@ -5,7 +5,8 @@ $('.show-hide').on('click',function(){
     $('.opacity').toggle();
     $('.cross-line').toggle();
 });
-function initMap() {
+$(window).on('load',
+function() {
     var myLatlng = new google.maps.LatLng(-20.397, 150.644);
     var myOptions = {
         zoom: 7,
@@ -36,7 +37,6 @@ function initMap() {
         });
         markers.push(marker);
         var info = '<div id="info-wrapp">' +
-            '<img src="phpto/'+id+'/'+photoName[0]+'.jpg">'+
             '<div><a href="/main/index/'+id+'">jjj</a></div>'+
             '<div class="marker-info">' +
             '<p>'+lat_Lng[2]+'</p>' +
@@ -55,7 +55,7 @@ function initMap() {
         });
 
     }
-}
+});
 
 
 function makeInfoWin(marker, data) {
@@ -73,14 +73,13 @@ function toggleBounce(){
         this.setAnimation(google.maps.Animation.BOUNCE);
     }
 }
-initMap();
-function fun(){
+// function fun(){
 
-    var de = '<a href="http://maps.googleapis.com/maps/api/geocode/json?address=kiev&sensor=false&language=ru">kkkkkkkkk</a>';
-    $('#filter').append(de);
-}
+//     var de = '<a href="http://maps.googleapis.com/maps/api/geocode/json?address=kiev&sensor=false&language=ru">kkkkkkkkk</a>';
+//     $('#filter').append(de);
+// }
 
-$('a').on('click',function(e){
-    e.preventDefault();
-});
+// $('a').on('click',function(e){
+//     e.preventDefault();
+// });
 
