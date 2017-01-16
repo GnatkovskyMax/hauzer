@@ -48,7 +48,7 @@
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-          renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
+          renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn ]);
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $table = 'objects';

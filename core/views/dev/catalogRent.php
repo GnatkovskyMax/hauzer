@@ -1,6 +1,6 @@
 <section>
     <h1 class="offers">Наши предложения аренды</h1>
-    <div class="disp wrap-catalog ">
+    <div class="disp wrap-catalog rent">
 <section class="section">
     <div class="container">
         <div class="col-md-12">
@@ -32,12 +32,16 @@
             <?php endfor;?>
         </div>
         <?php
-     echo    $_GET['m'];
-     $btn= count($data['btnRent'])/2-1 ;
+     echo    var_dump($_GET);
+     $btn= count($data['btnRent'])-1 ;
+        unset($_GET['m']);
+        echo    var_dump($_GET);
         for ($i = 1; $i <= $btn; $i++):
         ?>
-        <button class="load"><?=$i+1?></button>
-        <?php endfor;?>
+        <button class="load" onmousemove="load()"><?=$i+1?></button>
+        <?php endfor;
+
+        ?>
     </div>
 </section>
     </div>

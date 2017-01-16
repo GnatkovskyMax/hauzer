@@ -1,14 +1,14 @@
 /**
  * Created by Max on 15.01.2017.
  */
-$(window).on('load', function(){
+// $(document).ready(function(){
 
-    $('.load').on('click', function(){
-        console.log($(this).val());
-        var jm= +($(this).text());
-        $.get("/manual/catalogs",
-            {m: jm}, function(html){
-                $("body").html(html);
-            });
-    });
-});
+//     $('.load').on('click', function(){
+//       var jm= +($(this).text())+1;
+//         $.get("/manual/catalogs",
+//             {m: jm}, function(data){
+//                 data = $(data);
+//                 $(".wrap-catalog.rent").html($('.wrap-catalog.rent', data).html());
+//             });
+//     });
+// });

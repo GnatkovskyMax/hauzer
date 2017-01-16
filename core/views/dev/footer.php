@@ -33,6 +33,17 @@
 <!--    });-->
 <!--</script>-->
 <script type="text/javascript">
+
+function load(){
+    $('.load').on('click', function(){
+      var jm= +($(this).text());
+        $.get("/manual/catalogs",
+            {m: jm}, function(data){
+                data = $(data);
+                $(".wrap-catalog.rent").html($('.wrap-catalog.rent', data).html());
+            });
+    });
+};
     $(document).ready(function(){
         $('.catalog-img').slick({
             dots: true,
