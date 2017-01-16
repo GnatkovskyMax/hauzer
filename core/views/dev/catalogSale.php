@@ -6,15 +6,20 @@
                 <div class="col-md-12">
                     <?php
 //                    echo '<pre>';
-//                    var_dump($data['objectsFilter']);
-//                    var_dump($data['allObjectsSale']);
+//                    //var_dump($data['objectsFilter']);
+//                    var_dump($data['ArrObjectFilterSale']);
 //                    echo '</pre>';
-                    if($data['allObjectsSale'] !== NULL){
-                        $data['objects'] = $data['allObjectsSale'];
+//                    var_dump($ArrObjectFilterSale);
+                    if($data['ArrObjectFilterSale'] !== NULL){
+                        $data['objects'] = $data['ArrObjectFilterSale'];
+//                        echo '<pre>';
+//                        var_dump($data['objects']);
+//                        echo '</pre>';
                     }else{
-                        $data['objects'] = $data['objectsFilter'];
+                        $data['objects'] = $data['allObjectsSale'];
                     }
                     for ($i = 0; $i < count($data['objects']); $i++):
+//                        $idObject =
                         ?>
                         <div class="img-wrapp col-md-3">
                             <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
