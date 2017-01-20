@@ -40,20 +40,25 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
-//          var_dump($arr['search-id']);
+          //$arr = array_diff($arr, array(''));
+
 //          if(!empty($arr['search-id'])){
 //              $id = $arr['search-id'];
 //              $IdObjects = mysqli_fetch_all(findPostById($id), MYSQLI_ASSOC);
 //              renderView('catalogs', ['objects' => $IdObjects]);
 //          }else{
-              $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
-              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
-              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-              renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
+//              $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
+//              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+//              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+//              renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
 
-<<<<<<< HEAD
-          }else{
-=======
+
+//          }else{
+          if (empty(!$arr['search-id'])){
+              $objects = mysqli_fetch_all(findPostById ($arr['search-id']), MYSQLI_ASSOC);
+              renderView('object', ['objects' => $objects]);
+          }
+
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
@@ -61,7 +66,7 @@
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $s=(!empty($_GET['s'])) ? $_GET['s'] : 0;
->>>>>>> 397157b01c30f60e45c0540a1ccc8f41f7fc93ac
+
           $table = 'objects';
           $serviceRent = 'аренда';
           $serviceSale = 'продажа';

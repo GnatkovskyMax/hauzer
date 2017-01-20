@@ -34,5 +34,13 @@ require_once 'dev/filter.php';
                 ;?>
             </div>
         </section>
+        <section>
+            <h1 class="offer">Последнее аренда</h1>
+            <div class="disp wrap-catalog">
+                <?php
+                include 'dev/topSale.php'
+                ;?>
+            </div>
+        </section>
     </section>
 </main>
