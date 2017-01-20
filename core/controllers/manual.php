@@ -40,11 +40,20 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
-//          $arr = array_diff($arr, array(''));
-//          echo '<pre>';
-//          var_dump($arr);
-//          echo '</pre>';
+//          var_dump($arr['search-id']);
+//          if(!empty($arr['search-id'])){
+//              $id = $arr['search-id'];
+//              $IdObjects = mysqli_fetch_all(findPostById($id), MYSQLI_ASSOC);
+//              renderView('catalogs', ['objects' => $IdObjects]);
+//          }else{
+              $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
+              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+              renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
 
+<<<<<<< HEAD
+          }else{
+=======
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
@@ -52,6 +61,7 @@
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $s=(!empty($_GET['s'])) ? $_GET['s'] : 0;
+>>>>>>> 397157b01c30f60e45c0540a1ccc8f41f7fc93ac
           $table = 'objects';
           $serviceRent = 'аренда';
           $serviceSale = 'продажа';

@@ -5,6 +5,12 @@
     <div class="container">
         <div class="col-md-12">
             <?php
+            //var_dump('ArrObjectFilterRent');
+            if($data['ArrObjectFilterRent'] !== NULL){
+                $data['objects'] = $data['ArrObjectFilterRent'];
+            }else{
+                $data['objects'] = $data['objects'];
+            }
             for ($i = 0; $i < count($data['objects']); $i++):
 //                var_dump($data);
                 ?>
@@ -12,7 +18,7 @@
                     <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
                         <img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" >
                         <div class="position show">
-                            <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objectsRent'][$i]['street']?> &nbsp; <?=$data['objectsRent'][$i]{'house_number'} ?> </h1>
+                            <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>
                             <p>
                                 <?= $data['objects'][$i]['service']?>
                             </p>

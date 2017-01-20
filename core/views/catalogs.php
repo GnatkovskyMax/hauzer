@@ -30,18 +30,89 @@ require_once 'dev/filter.php';
                 require $catalogSale;
             }
         }elseif ($data['objectsFilter'] !== NULL){
-            for ($i = 0; $i < count($data['objectsFilter']); $i++) {
+
+//            foreach ($data['objectsFilter'] as $value) {
 //                echo '<pre>';
-//                var_dump($data['objectsFilter'][$i]);
+//                var_dump($value);
 //                echo '</pre>';
-                if ($data['objectsFilter'][$i]['service'] == 'Аренда') {
+                //for ($i = 0; $i < count($data['objectsFilter']); $i++) {
+
+                //var_dump($value['service']);
+//                    if ($data['objectsFilter'][$i]['service'] == 'Аренда'){
+//                        $data['ArrObjectFilterRent'][$i] = $data['objectsFilter'][$i];
+////                        var_dump($data['ArrObjectFilterRent'][$i]);
+//                    }elseif($data['objectsFilter'][$i]['service'] == 'Продажа'){
+//                        $data['ArrObjectFilterSale'][$i] = $data['objectsFilter'][$i];
+//                    }
+//                };
+            $i = 0;
+            $a = 0;
+        foreach ($data['objectsFilter'] as $value) {
+            if ($value['service'] == 'Аренда'){
+                $data['ArrObjectFilterRent'][$i] = $value;
+                $i=$i+1;
+//                        var_dump($data['ArrObjectFilterRent'][$i]);
+            }elseif($value['service'] == 'Продажа'){
+                $data['ArrObjectFilterSale'][$a] = $value;
+                $a=$a+1;
+            }
+        };
+//            echo '<pre>';
+//               var_dump($ArrObjectFilterRent);
+//                echo '</pre>';
+                if ($data['ArrObjectFilterRent'] !== NULL){
+                    //$data['ArrObjectFilterRent'] = $ArrObjectFilterRent;
                     require $catalogRent;
                 }
-                if ($data['objectsFilter'][$i]['service'] == 'Продажа') {
+                if ($data['ArrObjectFilterSale'] !== NULL){
+                    //$data['ArrObjectFilterSale'] = $ArrObjectFilterSale;
                     require $catalogSale;
                 }
-            }
-        }else{
+//                if(in_array('Продажа', $value)){
+//                    $i = 0;
+//                    $ArrObjectFilterSale = array();
+//                    $ArrObjectFilterSale[$i] = $value;
+//                    $i ++;
+//                }
+//                echo '<pre>';
+//               var_dump($value['service']);
+//               echo '</pre>';
+//                function rent($value)
+//                {
+//                    return ($value == 'Аренда');
+//                }
+//
+//                function sale($value)
+//                {
+//                    return ($value == 'Продажа');
+//                }
+
+//                $ArrObjectFilterRent = array_filter($value, function ($value) {
+//                    return ($value == 'Аренда');
+//                });
+//                $ArrObjectFilterSale = array_filter($value, function ($value) {
+//                    return ($value == 'Продажа');
+//                });
+
+//            for ($i = 0; $i < count($data['objectsFilter']); $i++) {
+//            foreach ($data['objectsFilter'] as $value){
+////                echo '<pre>';
+////                var_dump($i);
+////                //var_dump(count($data['objectsFilter'][$i]));
+////                var_dump($data['objectsFilter'][$i]);
+////                echo '</pre>';
+//                if (in_array('Аренда', $value)) {
+////                    var_dump($data);
+//                    require $catalogRent;
+//                }
+//                if (in_array('Продажа', $value)) {
+//                    require $catalogSale;
+//                }
+//            }
+                    // }
+
+
+                }else{
             require $catalogRent;
             require $catalogSale;
         }

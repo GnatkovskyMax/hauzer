@@ -1,6 +1,7 @@
 <?php
     function findPostById($id){
-        $sql = "SELECT id FROM object WHERE id = $id";
+        $sql = "SELECT * FROM `objects` WHERE id = $id";
+        var_dump($sql);
         return selectData($sql);
     }
 
@@ -58,6 +59,7 @@ function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
     function objectsOfFilter($arr){
         //var_dump($arr[district]);
         $sql = "SELECT * FROM `objects` WHERE objects.district = $arr[district] AND objects.rooms = $arr[rooms] AND objects.city = $arr[city] AND objects.service = $arr[service];";
+        var_dump($sql);
         return selectData($sql);
 
     }
