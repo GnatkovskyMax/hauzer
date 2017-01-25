@@ -1,7 +1,7 @@
 <div class='footer content clearfix'>
     <div class="row">
 <div class="container">
-   copy&& 2016 Hauzer
+   Hauzer 2016  &copy; 
 </div>
     </div>
 </div>

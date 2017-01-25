@@ -20,7 +20,10 @@
     padding:0;
    padding-right:2px;
 }
-
+.caption-price{
+    font-size: 2.5rem; 
+    text-align:right;
+}
 .catalog-info-wrap table{
     width: 100%;
     text-align: left;
@@ -32,7 +35,7 @@
 .catalog-info-wrap table tr{
     
     color:white;
-   background-color: #20DC9C;
+   background-color: grey;
     height: 39px;
     font-size: 16px;
    
@@ -48,10 +51,11 @@ td{
       background-color: white !important;
 }
 tr:last-child>td:nth-child(1){
+    width:185px;
  border-radius:0 0 0 5px;
 }
 tr:last-child>td:nth-child(2){
- border-radius:0 0 5px 0;
+ border-radius:0 0 5px 0 ;
 }
 caption{
     background-color: orange;
@@ -61,7 +65,9 @@ caption{
     border-radius: 5px 5px 0 0;
    // font-size: 30px;
 }
-
+.similar{
+    margin-bottom:30px;
+}
 .catalog-wrap-head{
     // text-align: left;
     font-size: 1.2rem;
@@ -81,9 +87,10 @@ caption{
 }
 
 .info-agent{
+    height:500px;
+    overflow:scroll;
     margin: 0 auto;
     font-size: 16px;
-    width: 35%;
     background: #DDDDDD;
 }
 

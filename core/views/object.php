@@ -6,9 +6,11 @@
 
 					
 				</div> -->
-				<table>
-					<caption class="catalog-wrap-head"><h1><?=$data['objects'][0]['city'] ?> <?=$data['objects'][0]['district'] ?> район</h1>
-					<h2><?=$data['objects'][0]['price'] ?> грн.</h2></caption>
+				<table class="col-md-12">
+					<caption class="catalog-wrap-head ">
+					<h1 class="col-md-8"><?=$data['objects'][0]['city'] ?> <?=$data['objects'][0]['district'] ?> район</h1>
+					<h2 class="caption-price col-md-4"><?=$data['objects'][0]['price'] ?> грн</h2>
+					</caption>
 					<tr class="tr-back">
 						<td>Адресс:</td>
 						<td>г.<?=$data['objects'][0]['city'] ?> ул. <?=$data['objects'][0]['street'] ?> <?=$data['objects'][0]['house_number'] ?> кв <?=$data['objects'][0]['apartament_number'] ?></td>
@@ -51,8 +53,20 @@
                      <?php endfor; ?>
 				</div>
 			</div>
-			<p class="catalog-info"><?=$data['objects'][0]['descriptione']?></p>
- <div class="info-agent">
+
+			<p class="catalog-info col-xs-12 col-md-12 col-lg-12"><?=$data['objects'][0]['descriptione']?></p>
+			 <?php
+             require 'dev/similarObjects.php';
+             ?>
+			
+			<div class='second-block col-md-12'>
+		  <section class="map hidden-xs col-md-8">
+        <?php
+        require_once 'dev/maps.php';
+        ?>
+
+    </section>
+    	<div class="info-agent col-md-4">
 		<h2>Информация об агенете</h2>
 		<img class="disp" src="/assets/img/img_agents/2.png">
 		<div class="info disp">
@@ -63,6 +77,11 @@
 		</div>
 		<P>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</P>
 	</div>
+	        </div>
+		
+	
+			</div>
+ 
 			<div class="back-dialog" id="dialog">
 					<div class="dialog-content">
 						<div class="dialog-title">
@@ -108,9 +127,6 @@
 			<button class="butt">Отправить</button>
 		</form>
 	</section> -->
-    <?php
-    require 'dev/similarObjects.php';
-    ?>
     </div>
 	</main>
 
