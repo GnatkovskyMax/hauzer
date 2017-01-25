@@ -47,21 +47,6 @@
 //              $IdObjects = mysqli_fetch_all(findPostById($id), MYSQLI_ASSOC);
 //              renderView('catalogs', ['objects' => $IdObjects]);
 //          }else{
-<<<<<<< HEAD
-//              $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
-//              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
-//              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-//              renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
-
-
-//          }else{
-          if (empty(!$arr['search-id'])){
-              $objects = mysqli_fetch_all(findPostById ($arr['search-id']), MYSQLI_ASSOC);
-              renderView('object', ['objects' => $objects]);
-          }
-
-=======
->>>>>>> 553b433d9bf88e24db8c67f7e44d0e2c3c17b2ad
           $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
           $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
           $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);

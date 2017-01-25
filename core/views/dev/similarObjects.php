@@ -1,5 +1,6 @@
-
+<?php  if(count($data['similars'])!=0):?>
 <section>
+
     <h1 class="">Похожие</h1>
     <div class="disp wrap-catalog rent">
 <section class="section">
@@ -45,4 +46,4 @@
 </section>
     </div>
 </section>
-
+<?php endif;?>
