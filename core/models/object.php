@@ -1,7 +1,6 @@
 <?php
     function findPostById($id){
         $sql = "SELECT * FROM `objects` WHERE id = $id";
-        var_dump($sql);
         return selectData($sql);
     }
 
@@ -37,9 +36,14 @@
     }
 
      function findAllObjectTopIndex($service){
-         $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number` FROM `objects` WHERE objects.top = 'top' AND objects.service = '$service';";
+         $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number` FROM `objects` WHERE objects.top = 'top' AND objects.service = '$service' LIMIT 0,5;";
          return selectData($sql);
      }
+
+    function findAllObjectRecent($service){
+        $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number` FROM `objects` WHERE objects.service = 'Аренда' ORDER BY objects.bub_date DESC LIMIT 0,5;;";
+        return selectData($sql);
+    }
 
      function getIdSegment($num){
          $sql = "SELECT `id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number`, `img` , `img_object` FROM `objects` WHERE objects.id = '$num';";
@@ -59,7 +63,7 @@ function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
     function objectsOfFilter($arr){
         //var_dump($arr[district]);
         $sql = "SELECT * FROM `objects` WHERE objects.district = $arr[district] AND objects.rooms = $arr[rooms] AND objects.city = $arr[city] AND objects.service = $arr[service];";
-        var_dump($sql);
+        //var_dump($sql);
         return selectData($sql);
 
     }

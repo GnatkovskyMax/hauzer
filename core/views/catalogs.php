@@ -31,6 +31,7 @@ require_once 'dev/filter.php';
             }
         }elseif ($data['objectsFilter'] !== NULL){
 
+
 //            foreach ($data['objectsFilter'] as $value) {
 //                echo '<pre>';
 //                var_dump($value);
@@ -112,7 +113,9 @@ require_once 'dev/filter.php';
                     // }
 
 
-                }else{
+                }
+//        elseif ($data['objectsFilter'] !== NULL){
+                else{
             require $catalogRent;
             require $catalogSale;
         }

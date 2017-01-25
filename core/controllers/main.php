@@ -1,6 +1,6 @@
 <?php
     function action_index(){
-        $serviceRent = 'аренда';
+        $serviceRent = 'Аренда';
         $serviceSale = 'Продажа';
 //        $objects = mysqli_fetch_all(findAllFromTable('objects'), MYSQLI_ASSOC);
         $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
@@ -28,9 +28,11 @@
 //        //var_dump($arr);
 //        $arra = array_unshift($arr, "Киев");
 //        var_dump($arr);
+        $recentRent = mysqli_fetch_all(findAllObjectRecent($serviceRent), MYSQLI_ASSOC);
+        $recentSale = mysqli_fetch_all(findAllObjectRecent($serviceRent), MYSQLI_ASSOC);
         $topRent = mysqli_fetch_all(findAllObjectTopIndex($serviceRent), MYSQLI_ASSOC);
         $topSale = mysqli_fetch_all(findAllObjectTopIndex($serviceSale), MYSQLI_ASSOC);
-        renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'filter' => $objectsFilter]);
+        renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'filter' => $objectsFilter, 'recentRent' =>$recentRent, 'recentSale' =>$recentSale]);
     }
 
     function action_contact(){
