@@ -1,5 +1,13 @@
 <div class="content  clearfix" id="filter">
         <div class="container">
+<!--            --><?php
+//                if (!empty($_GET['search-id'])){
+//                    $action = 'object';
+//                    var_dump($action);
+//                }else{
+//                    $action = 'catalogs';
+//                }
+//            ?>
 <form method="get" action="/manual/catalogs">
     <div class="filter-line">
 			<div class="col-xs-2 visible-xs adv-xs adv"></div>
@@ -10,6 +18,7 @@
         </div>
         <div class="fifty col-sm-7 col-md-5 col-lg-55">
         <div class="hidden-xs col-sm-2 select adva-wrapp">
+
 <!--            <select name="raen" >-->
 <!--                <option value="all">Все раены</option>-->
 <!--            --><?php

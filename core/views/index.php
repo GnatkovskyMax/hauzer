@@ -38,7 +38,15 @@ require_once 'dev/filter.php';
             <h1 class="offer">Последнее аренда</h1>
             <div class="disp wrap-catalog">
                 <?php
-                include 'dev/topSale.php'
+                include 'dev/recentRent.php'
+                ;?>
+            </div>
+        </section>
+        <section>
+            <h1 class="offer">Последнее продажа</h1>
+            <div class="disp wrap-catalog">
+                <?php
+                include 'dev/recentSale.php'
                 ;?>
             </div>
         </section>

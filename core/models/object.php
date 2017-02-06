@@ -36,12 +36,12 @@
     }
 
      function findAllObjectTopIndex($service){
-         $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number` FROM `objects` WHERE objects.top = 'top' AND objects.service = '$service' LIMIT 0,5;";
+         $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number`, `img` FROM `objects` WHERE objects.top = 'top' AND objects.service = '$service' LIMIT 0,5;";
          return selectData($sql);
      }
 
     function findAllObjectRecent($service){
-        $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number` FROM `objects` WHERE objects.service = 'Аренда' ORDER BY objects.bub_date DESC LIMIT 0,5;;";
+        $sql = "SELECT `id`,`city`,`district`,`rooms`,`total_area`,`price`,`square_meter`,`top`,`street`,`house_number` , `img` FROM `objects` WHERE objects.service = '$service' ORDER BY objects.bub_date DESC LIMIT 0,5;";
         return selectData($sql);
     }
 
@@ -65,5 +65,14 @@ function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
         $sql = "SELECT * FROM `objects` WHERE objects.district = $arr[district] AND objects.rooms = $arr[rooms] AND objects.city = $arr[city] AND objects.service = $arr[service];";
         //var_dump($sql);
         return selectData($sql);
-
     }
+
+    function findFromAdress($city, $street){
+        $sql = "SELECT `id`,`city`,`street`,`house_number`,`district`,`rooms`,`price`,`total_area`, `service`, `img` , `img_object`,`square_meter` FROM `objects` WHERE objects.city = '$city' AND objects.street = '$street';";
+        return selectData($sql);
+    }
+
+function findFromAdressAll($city, $street){
+    $sql = "SELECT `id`,`city`,`street`,`house_number`,`district`,`rooms`,`price`,`total_area`, `service`, `img` , `img_object`,`square_meter` FROM `objects` WHERE objects.city = $city AND objects.street = '$street';";
+    return selectData($sql);
+}

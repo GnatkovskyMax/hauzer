@@ -10,9 +10,10 @@
         $roomOb = $El[0]['rooms'];
         $priceOb = $El[0]['price'];
         $IdOb = $El[0]['id'];
-
         $similarObjects = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
-        renderView ('object', ['objects' => $El, 'similars' => $similarObjects] );
+        renderView('object', ['objects' => $El, 'similars' => $similarObjects]);
+
+
 
 //      $categoryName = getUrlSegment(2);
 //      if (is_null($categoryName)){               !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -40,32 +41,42 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
-          //$arr = array_diff($arr, array(''));
-
-//          if(!empty($arr['search-id'])){
-//              $id = $arr['search-id'];
-//              $IdObjects = mysqli_fetch_all(findPostById($id), MYSQLI_ASSOC);
-//              renderView('catalogs', ['objects' => $IdObjects]);
-//          }else{
-<<<<<<< HEAD
-//              $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
-//              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
-//              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-//              renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter]);
-
-
-//          }else{
-          if (empty(!$arr['search-id'])){
+          if(!empty($arr['search-address'])) {
+              $a=0;
+              $searchAdress = explode('.', $arr['search-address']);
+              foreach ($searchAdress as $value){
+                  $searchAdressARR[$a] = explode(' ', $value);
+                  $a = $a + 1;
+              }
+              $arrSearch = array();
+              foreach ($searchAdressARR as $value){
+                  $arrSearch = array_merge($arrSearch, $value);
+              }
+              for ($i = 0; $i<count($arrSearch); $i++){
+                  if(strlen($arrSearch[$i])<5){
+                      unset($arrSearch[$i]);
+                  }
+              }
+              $arrSearch = array_values($arrSearch);
+              if (count($arrSearch) > 1){
+                  $city = $arrSearch[0];
+                  $street = $arrSearch[1];
+                  $objects = mysqli_fetch_all(findFromAdress($city, $street), MYSQLI_ASSOC);
+              }
+              else{
+                  $city = city;
+                  $street = $arrSearch[0];
+                  $objects = mysqli_fetch_all(findFromAdressAll($city, $street), MYSQLI_ASSOC);
+              }
+              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+              renderView('catalogs', ['allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects, 'filter' => $objectsFilter]);
+          }elseif (empty(!$arr['search-id'])){
               $objects = mysqli_fetch_all(findPostById ($arr['search-id']), MYSQLI_ASSOC);
-              renderView('object', ['objects' => $objects]);
+              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+              renderView('catalogs', ['allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects, 'filter' => $objectsFilter]);
           }
-
-=======
->>>>>>> 553b433d9bf88e24db8c67f7e44d0e2c3c17b2ad
-          $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
-          $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
-          $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-          renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn,'btnSale'=>$allObjectsSaleForBtn ]);
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $s=(!empty($_GET['s'])) ? $_GET['s'] : 0;
@@ -87,7 +98,9 @@
 
           renderView('catalogs', ['objects' => $objects, 'allObjectsSale' => $allObjectsSale, 'allObjectsRentOfDays' => $allObjectsRentOfDays, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn,'btnSale'=>$allObjectsSaleForBtn ]);
       }
-
+//      $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+//      $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+//      renderView('catalogs', ['allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter, 'filter' => $objectsFilter]);
       //var_dump($_GET);
 //      $arrService = findService();
 //      $arrService = mysqli_fetch_all($arrService, MYSQLI_ASSOC);

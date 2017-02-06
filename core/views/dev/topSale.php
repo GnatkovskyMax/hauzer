@@ -10,7 +10,7 @@
 
                 <div class="img-wrapp col-md-4">
                     <a class="" href="/manual/object/<?= $data['objectsSale'][$i]{'id'} ?>"><!--element-shadow-->
-                        <img src="/assets/img/header2.jpg" >
+                        <img src="/assets/img/<?=$data['objectsSale'][$i]{'img'}?>.jpg" >
                         <div class="position ">
                             <h1><?= $data['objectsSale'][$i]{'city'}?> &nbsp; <?=$data['objectsSale'][$i]['street']?> &nbsp; <?=$data['objectsSale'][$i]{'house_number'} ?> </h1>
                             <p>

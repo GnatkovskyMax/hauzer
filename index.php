@@ -1,5 +1,6 @@
 <?php
     session_start();
+require_once 'assets/PHPMailer-master/PHPMailerAutoload.php';
     require_once 'core/library/main.php';
     require_once 'core/library/db.php';
     require_once 'core/library/main.php';
@@ -7,6 +8,8 @@
     require_once 'core/models/object.php';
     require_once 'core/views/dev/header.php';
     require_once 'core/models/news.php';
+    require_once 'core/library/PHPMailer.php';
+
     /*$url = $_GET['url'];
 
     $urlSegments = explode('/', $url);
