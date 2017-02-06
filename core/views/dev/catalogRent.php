@@ -1,9 +1,9 @@
 <section>
     <h1 class="offers">Наши предложения аренды</h1>
-    <div class="disp wrap-catalog rent">
+    <div class="disp wrap-catalog rent ">
 <section class="section">
     <div class="container">
-        <div class="col-md-12">
+        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 bootstrap-padding-none wrapp-parent">
             <?php
             if($data['ArrObjectFilterRent'] !== NULL){
                 $data['objects'] = $data['ArrObjectFilterRent'];
@@ -13,10 +13,13 @@
             for ($i = 0; $i < count($data['objects']); $i++):
 //                var_dump($data);
                 ?>
-                <div class="img-wrapp col-md-3">
-                    <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
-                        <img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" >
-                        <div class="position show">
+<div class="img-wrapp col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="wrapp-body">
+                    <a class="overflow-hidden" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
+                        <div class="img-wrapp-z-index">
+                        </div><!--
+                        --><img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" ><!--
+                        --><div class="position show">
                             <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>
                             <p>
                                 <?= $data['objects'][$i]['service']?>
@@ -30,10 +33,11 @@
                             <p>
                                 Общая площадь:<?= $data['objects'][$i]['square_meter']?>
                             </p>
+                            </div>
 
-                        </div>
                     </a>
                 </div>
+        </div>
             <?php endfor;?>
         </div>
         <div class="col-md-12 forBtn">
@@ -41,7 +45,7 @@
         $btn= count($data['btnRent']) ;
         for ($i = 1; $i <= $btn; $i++):
         ?>
-        <button class="load" onmousemove="load()"><?=$i?></button>
+        <button class="load" ><?=$i?></button>
         <?php endfor;
 
         ?>

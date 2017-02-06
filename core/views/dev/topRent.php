@@ -9,6 +9,8 @@
 
         <div class="img-wrapp col-md-4">
             <a class="" href="/manual/object/<?= $data['objectsRent'][$i]{'id'} ?>"><!--element-shadow-->
+                <div class="img-wrapp-z-index">
+                </div>
                 <img class="img-responsive" src="/assets/img/header2.jpg" >
                 <div class="position ">
                     <h1><?= $data['objectsRent'][$i]{'city'}?> &nbsp; <?=$data['objectsRent'][$i]['street']?> &nbsp; <?=$data['objectsRent'][$i]{'house_number'} ?> </h1>

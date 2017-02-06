@@ -22,7 +22,10 @@
 //                        $idObject =
                         ?>
                         <div class="img-wrapp col-md-3">
+
                             <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
+                                <div class="img-wrapp-z-index">
+                                </div>
                                 <img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" >
                                 <div class="position show">
                                     <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>
@@ -48,7 +51,7 @@
         $btn= count($data['btnSale']) ;
         for ($i = 1; $i <= $btn; $i++):
         ?>
-        <button class="loadSale" onmousemove="loadSale()"><?=$i?></button>
+        <button class="loadSale" ><?=$i?></button>
         <?php endfor;
 
         ?>
