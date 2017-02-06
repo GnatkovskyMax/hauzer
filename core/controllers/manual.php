@@ -41,6 +41,7 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
+<<<<<<< HEAD
           if(!empty($arr['search-address'])) {
               $a=0;
               $searchAdress = explode('.', $arr['search-address']);
@@ -77,6 +78,19 @@
               $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
               renderView('catalogs', ['allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects, 'filter' => $objectsFilter]);
           }
+=======
+          //$arr = array_diff($arr, array(''));
+
+//          if(!empty($arr['search-id'])){
+//              $id = $arr['search-id'];
+//              $IdObjects = mysqli_fetch_all(findPostById($id), MYSQLI_ASSOC);
+//              renderView('catalogs', ['objects' => $IdObjects]);
+//          }else{
+          $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
+          $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+          $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+          renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn,'btnSale'=>$allObjectsSaleForBtn ]);
+>>>>>>> 82a50934344eb901e273549cb7d6ca259718cc56
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $s=(!empty($_GET['s'])) ? $_GET['s'] : 0;

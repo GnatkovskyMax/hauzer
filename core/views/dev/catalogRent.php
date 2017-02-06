@@ -5,7 +5,6 @@
     <div class="container">
         <div class="col-md-12">
             <?php
-            //var_dump('ArrObjectFilterRent');
             if($data['ArrObjectFilterRent'] !== NULL){
                 $data['objects'] = $data['ArrObjectFilterRent'];
             }else{
