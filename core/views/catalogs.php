@@ -116,9 +116,13 @@ require_once 'dev/filter.php';
                 }
 //        elseif ($data['objectsFilter'] !== NULL){
                 else{
+
             require $catalogRent;
             require $catalogSale;
         }
+        $rent=true;///test
+        $sale=true;//test
+        require 'dev/helper-panel.php'//test
 //        if ($data['objectsFilter'] !== NULL) {
 //            for ($i = 0; $i < count($data['objectsFilter']); $i++) {
 //                if ($data['objectsFilter'][$i]['service'] == 'аренда') {

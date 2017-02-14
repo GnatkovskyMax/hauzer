@@ -1,7 +1,7 @@
-<div class='footer content clearfix'>
-    <div class="row">
-<div class="container">
-   Hauzer 2016  &copy; 
+<div class='footer content'>
+    <div class="container">
+<div class="">
+   Hauzer 2016  &copy;
 </div>
     </div>
 </div>
@@ -13,7 +13,7 @@
 <script src="/assets/js/select.js"></script>
 <script src="/assets/js/dop_link.js"></script>
 <script src="/assets/js/output-position&btn.js"></script>
-
+<script src="/assets/js/modal-form_btn-scroll.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="/assets/slick/slick/slick.min.js"></script>

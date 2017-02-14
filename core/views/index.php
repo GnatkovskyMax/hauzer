@@ -1,3 +1,8 @@
+
+<?php
+$rent=true;
+$sale=true;
+require 'dev/helper-panel.php'?>
 <?php
 require_once 'dev/filter.php';
 ?>
@@ -17,7 +22,7 @@ require_once 'dev/filter.php';
             <p>Наш девиз: «Профессионализм – залог успеха». Именно он определяет долгосрочную стратегию развития нашей компании, основанную на предоставлении профессиональных и качественных услуг, индивидуального подхода к требованиям каждого клиента.</p>
         </section>
 
-        <section>
+        <section class="scroll-rent">
             <h1 class="offer">Наши TOP предложения аренды</h1>
             <div class="disp wrap-catalog">
                 <?php
@@ -26,7 +31,7 @@ require_once 'dev/filter.php';
             </div>
 
         </section>
-        <section>
+        <section class="scroll-sale">
             <h1 class="offer">Наши TOP предложения продажи</h1>
             <div class="disp wrap-catalog">
                 <?php

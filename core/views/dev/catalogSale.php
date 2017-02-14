@@ -1,4 +1,4 @@
-<section>
+<section class="scroll-sale">
     <h1 class="offers">Наши предложения продажи</h1>
     <div class="disp wrap-catalog sale">
         <section class="section">

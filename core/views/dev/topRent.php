@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section scroll-rent">
    <div class="container">
      <div class="col-md-7">
     <?php

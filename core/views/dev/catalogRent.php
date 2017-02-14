@@ -1,4 +1,4 @@
-<section>
+<section class="scroll-rent">
     <h1 class="offers">Наши предложения аренды</h1>
     <div class="disp wrap-catalog rent ">
 <section class="section">
@@ -40,7 +40,7 @@
         </div>
             <?php endfor;?>
         </div>
-        <div class="col-md-12 forBtn">
+        <div class="col-xs-12 col-md-12 col-lg-12 forBtn">
         <?php
         $btn= count($data['btnRent']) ;
         for ($i = 1; $i <= $btn; $i++):

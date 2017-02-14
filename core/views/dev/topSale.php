@@ -1,5 +1,5 @@
 
-<section class="section">
+<section class="section scroll-sale">
     <div class="container">
         <div class="col-md-7">
             <?php
