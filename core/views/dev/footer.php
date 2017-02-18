@@ -1,11 +1,12 @@
-<div class='footer content'>
+<div class='footer content clearfix'>
     <div class="container">
+    <div class="row">
 <div class="">
    Hauzer 2016  &copy;
 </div>
     </div>
 </div>
-
+</div>
 <!--polzunok-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

@@ -1,8 +1,8 @@
 <section class="scroll-rent">
     <h1 class="offers">Наши предложения аренды</h1>
     <div class="disp wrap-catalog rent ">
-<section class="section">
-    <div class="container">
+<section class="section container">
+    <div class="row">
         <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 bootstrap-padding-none wrapp-parent">
             <?php
             if($data['ArrObjectFilterRent'] !== NULL){

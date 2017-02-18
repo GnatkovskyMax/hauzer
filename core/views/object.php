@@ -1,11 +1,13 @@
 <main class="container">
 <div class="row">
 		<section class="catalog-wrap col-xs-12 col-md-12 col-lg-12">
-			<div class="col-md-6 catalog-info-wrap "><!--  disp -->
-				<!-- <div >
+			<div class="col-md-6 catalog-info-wrap ">
+                <div class="helper-panel">
 
-					
-				</div> -->
+                    <div class="helper-btn call"></div>
+                    <div class="helper-btn up-scroll"></div>
+                </div>
+
 				<table class="col-md-12">
 					<caption class="catalog-wrap-head ">
 					<h1 class="col-md-8"><?=$data['objects'][0]['city'] ?> <?=$data['objects'][0]['district'] ?> район</h1>

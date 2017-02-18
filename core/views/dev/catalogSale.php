@@ -1,9 +1,9 @@
 <section class="scroll-sale">
     <h1 class="offers">Наши предложения продажи</h1>
     <div class="disp wrap-catalog sale">
-        <section class="section">
-            <div class="container">
-                <div class="col-md-12">
+        <section class="section container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 bootstrap-padding-none wrapp-parent">
                     <?php
 //                    echo '<pre>';
 //                    //var_dump($data['objectsFilter']);
@@ -21,9 +21,9 @@
                     for ($i = 0; $i < count($data['objects']); $i++):
 //                        $idObject =
                         ?>
-                        <div class="img-wrapp col-md-3">
-
-                            <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
+                        <div class="img-wrapp col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="wrapp-body">
+                            <a class="overflow-hidden" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
                                 <div class="img-wrapp-z-index">
                                 </div>
                                 <img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" >
@@ -43,10 +43,11 @@
                                     </p>
                                 </div>
                             </a>
+                                </div>
                         </div>
                     <?php endfor; ?>
                     </div>
-                    <div class="col-md-12 forBtn">
+                    <div class="col-xs-12 col-md-12 col-lg-12 forBtn">
                      <?php
         $btn= count($data['btnSale']) ;
         for ($i = 1; $i <= $btn; $i++):

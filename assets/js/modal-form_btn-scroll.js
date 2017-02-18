@@ -31,32 +31,27 @@ $('.helper-panel').on('click',function (e) {
     console.log(obj.className);
  switch(obj.className){
      case "helper-btn rent-scroll":
+         console.log($('#filter').height());
          var rent = $('.scroll-rent').offset().top;
-         var height = $('.offers').height();
-         var scroll;
-         if($('body').width()<=768&&!$('#filter').is('.hh')){
-             scroll = rent-height-20-40;
-         }else if($('body').width()<=768&&$('#filter').is('.hh')){
-             scroll = rent-height-20;
+         var height;
+         if($('#filter').is('.hh')){
+              height= $('#filter').height();
          }else{
-             scroll = rent-height-5;
+             height= $('#filter').height()*2;
          }
-         console.log(rent+'...'+height);
+         var scroll = rent-height;
          $('body').animate({ scrollTop: scroll }, 600);
          return false;
          break;
      case "helper-btn sale-scroll":
          var sale = $('.scroll-sale').offset().top;
-         var height = $('.offers').height();
-         var scroll;
-         if($('body').width()<=768&&!$('#filter').is('.hh')){
-             scroll = sale-height-20-40;
-         }else if($('body').width()<=768&&$('#filter').is('.hh')){
-             scroll = sale-height-20;
+         var height;
+         if($('#filter').is('.hh')){
+             height= $('#filter').height();
          }else{
-             scroll = sale-height-5;
+             height= $('#filter').height()*2;
          }
-         console.log(sale+'...'+height);
+         var scroll = sale-height;
          $('body').animate({ scrollTop: scroll }, 600);
          return false;
          break;

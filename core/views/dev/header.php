@@ -27,8 +27,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     </head>
 <body>
-<div class='header'>
-<div class="container">
+<div class='header container'>
+<div class="row">
 <h1 class=' col-xs-12 col-sm-4 col-md-2 col-lg-2 '>
 HOUZEZ
 </h1>

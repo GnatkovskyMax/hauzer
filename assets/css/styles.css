@@ -1,6 +1,4 @@
-.header h1, ul, li, a, .container{
-    padding:0;
-}
+
 .nav>li{
     vertical-align: top;
     position:inherit;
