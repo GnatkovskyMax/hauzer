@@ -1,4 +1,29 @@
-
+.position h1,.position-recent h1{
+    font-size:1.4rem;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.position p, .position-recent p{
+    font-size:1.1rem;
+    line-height:.8rem;
+}
+.position p:nth-child(2){
+    font-size:1.3rem;
+    color:orange;
+}
+.img-wrapp a, .img-wrapp img {
+    display:block;
+    height: 100%;
+    width: 100%;
+}
+.top-label{
+    position:absolute;
+    top:-7px;
+    left:-7px;
+    width:50px;
+    height:50px;
+    background: url('/assets/img/top-xs.png') no-repeat;
+}
 @media(max-width:370px){
   .img-wrapp{
       width:100% !important;
@@ -95,30 +120,4 @@
         height:100px;
     }
 
-}
-.position h1,.position-recent h1{
-    font-size:1.4rem;
-    margin-top:4px;
-    margin-bottom:4px;
-}
-.position p, .position-recent p{
-    font-size:1.1rem;
-    line-height:.8rem;
-}
-.position p:nth-child(2){
-    font-size:1.3rem;
-  color:orange;
-}
-.img-wrapp a, .img-wrapp img {
-    display:block;
-    height: 100%;
-    width: 100%;
-}
-.top-label{
-    position:absolute;
-    top:-7px;
-    left:-7px;
-    width:50px;
-    height:50px;
-    background: url('/assets/img/top-xs.png') no-repeat;
 }

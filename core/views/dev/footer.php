@@ -3,12 +3,12 @@
     <div class="row">
 <div class="">
    Hauzer 2016  &copy;
+
 </div>
     </div>
 </div>
 </div>
 <!--polzunok-->
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/assets/js/nav-xs.js"></script>
 <script src="/assets/js/select.js"></script>

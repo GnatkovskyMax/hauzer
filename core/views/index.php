@@ -1,10 +1,9 @@
-
 <?php
+
 $rent=true;
 $sale=true;
-require 'dev/helper-panel.php'?>
-<?php
-require_once 'dev/filter.php';
+require 'dev/helper-panel.php';
+require_once 'dev/filter.php'
 ?>
     <section class="map hidden-xs">
         <!--            <h1 class="offer">Объекты на карте</h1>-->
