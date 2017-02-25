@@ -7,7 +7,6 @@ require_once 'dev/filter.php';
         <?php
         require_once 'dev/maps.php';
         ?>
-
     </section>
     <section>
         <section class="descriptionHauzez">

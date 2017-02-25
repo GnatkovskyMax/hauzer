@@ -14,7 +14,7 @@
 //                var_dump($data);
                 ?>
                 <div class="img-wrapp col-md-3">
-                    <a class="" href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
+                    <a href="/manual/object/<?= $data['objects'][$i]{'id'} ?>"><!--element-shadow-->
                         <img src="/assets/img/<?=$data['objects'][$i]{'img'}?>.jpg" >
                         <div class="position show">
                             <h1><?= $data['objects'][$i]{'city'}?> &nbsp; <?=$data['objects'][$i]['street']?> &nbsp; <?=$data['objects'][$i]{'house_number'} ?> </h1>

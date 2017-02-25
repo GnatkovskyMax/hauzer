@@ -3,6 +3,9 @@
         $config = require 'core/configs/db.php';
 
         $link = @mysqLi_connect($config['host'], $config['user'], $config['password'], $config['db_name']);
+        //var_dump($link);
+        $links = mysqli_set_charset($link, 'utf8');
+        //var_dump($links);
 
         if(!$link){
             echo "db connect error"; // сделать страницу с ошибкой.

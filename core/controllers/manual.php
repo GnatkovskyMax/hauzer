@@ -5,13 +5,15 @@
 
   function action_object(){
         $ElId = getUrlSegment(2);
-        $El = mysqli_fetch_all(getIdSegment($ElId), MYSQLI_ASSOC);;
+        $El = mysqli_fetch_all(getIdSegment($ElId), MYSQLI_ASSOC);
+        $agentsInfo = mysqli_fetch_all(findAgents($El[0]['agents_id']), MYSQLI_ASSOC);
         $cityOb = $El[0]['city'];
         $roomOb = $El[0]['rooms'];
         $priceOb = $El[0]['price'];
         $IdOb = $El[0]['id'];
         $similarObjects = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
-        renderView('object', ['objects' => $El, 'similars' => $similarObjects]);
+        //$agents = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
+        renderView('object', ['objects' => $El, 'similars' => $similarObjects, 'agents' => $agentsInfo]);
 
 
 
@@ -41,10 +43,10 @@
   {
       if (count($_GET)>5){
           $arr = array_slice($_GET, 1);
-<<<<<<< HEAD
           if(!empty($arr['search-address'])) {
+              $address = valid_adress(htmlspecialchars(trim($arr['search-address'])));
               $a=0;
-              $searchAdress = explode('.', $arr['search-address']);
+              $searchAdress = explode('.', $address);
               foreach ($searchAdress as $value){
                   $searchAdressARR[$a] = explode(' ', $value);
                   $a = $a + 1;
@@ -78,19 +80,18 @@
               $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
               renderView('catalogs', ['allObjectsTop' => $allObjectsTop, 'objectsFilter' => $objects, 'filter' => $objectsFilter]);
           }
-=======
           //$arr = array_diff($arr, array(''));
 
 //          if(!empty($arr['search-id'])){
 //              $id = $arr['search-id'];
 //              $IdObjects = mysqli_fetch_all(findPostById($id), MYSQLI_ASSOC);
 //              renderView('catalogs', ['objects' => $IdObjects]);
-//          }else{
-          $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
-          $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
-          $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
-          renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn,'btnSale'=>$allObjectsSaleForBtn ]);
->>>>>>> 82a50934344eb901e273549cb7d6ca259718cc56
+          else {
+              $objects = mysqli_fetch_all(objectsOfFilter($arr), MYSQLI_ASSOC);
+              $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
+              $allObjectsTop = mysqli_fetch_all(findAllObjectTop(), MYSQLI_ASSOC);
+              renderView('catalogs', ['objects' => $objects, 'objectsFilter' => $objects, 'allObjectsTop' => $allObjectsTop, 'filter' => $objectsFilter,'btnRent'=>$allObjectsRentForBtn,'btnSale'=>$allObjectsSaleForBtn ]);
+          }
       }else{
           $m=(!empty($_GET['m'])) ? $_GET['m'] : 0;
           $s=(!empty($_GET['s'])) ? $_GET['s'] : 0;

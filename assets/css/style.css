@@ -1,6 +1,6 @@
-// .catalog-wrap{
-//     font-size: 0;
-// }
+/*// .catalog-wrap{*/
+/*//     font-size: 0;*/
+/*// }*/
 
 .disp{
     display: inline-block;
@@ -41,7 +41,7 @@
    
    // color:#20DC9C;
 }
-td{
+.tr-back td{
      padding-left:15px !important;
     line-height:39px;
 }

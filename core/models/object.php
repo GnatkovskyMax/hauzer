@@ -46,7 +46,7 @@
     }
 
      function getIdSegment($num){
-         $sql = "SELECT `id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number`, `img` , `img_object` FROM `objects` WHERE objects.id = '$num';";
+         $sql = "SELECT `id`,`agents_id`,`basic_description`,`descriptione`,`bub_date`,`square_meter`,`price`,`rooms`,`total_area`,`area`,`city`,`district`,`street`,`house_number`,`apartament_number`, `img` , `img_object` FROM `objects` WHERE objects.id = '$num';";
          return selectData($sql);
      }
 
@@ -74,5 +74,10 @@ function similarObject($cityOb, $roomOb, $priceOb, $IdOb)
 
 function findFromAdressAll($city, $street){
     $sql = "SELECT `id`,`city`,`street`,`house_number`,`district`,`rooms`,`price`,`total_area`, `service`, `img` , `img_object`,`square_meter` FROM `objects` WHERE objects.city = $city AND objects.street = '$street';";
+    return selectData($sql);
+}
+
+function findAgents ($id){
+    $sql = "SELECT * FROM `agents` WHERE id ='$id'";
     return selectData($sql);
 }

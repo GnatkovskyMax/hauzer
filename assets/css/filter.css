@@ -164,9 +164,9 @@ border-radius: 5px 5px 0 0 ;
 	border-radius:7px;
     position:relative;
 }
-select{
-	display:none;
-}
+/*select{*/
+	/*display:none;*/
+/*}*/
 .adv-xs{
     margin-right:-10px;
     vertical-align: middle;

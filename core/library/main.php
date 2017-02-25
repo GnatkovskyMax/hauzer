@@ -39,3 +39,10 @@
 //        var_dump($idEl);
 //        //renderView($view_name, )
 //    }
+
+function is_auth(){
+        if(isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])){
+            return true;
+        }
+        return false;
+}

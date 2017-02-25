@@ -5,32 +5,26 @@ $(function () {
         $(this).find('input').each(function () {
             if($.trim($(this).val()) == ''){
                 errors = true;
-                // $(this)
+                $(this).next().text('Не заполнено поле');
             }
+
         });
-        if(!errors){
+
+        if(!errors) {
             var data = $('#contact').serialize();
-            $.ajax({
-                url: 'index.php',
+            $.ajax ({
+                url: '/main/send',
                 type: 'POST',
                 data: data,
-                beforeSend: function () {
-                    $('#submit').next().text('Отправляю...');
-                },
-                success: function (rez) {
-                    if(rez == 1){
-                        $('#contact').find('input:not(#submit)').val('');
-                    }else{
-                        $('#submit').next().empty();
-                        alert('Ошибка отправки сообщения');
-                    }
+                success: function () {
+                    alert ('Письмо успешно отправлено!');
                 },
                 error: function () {
                     alert('Ошибка');
                 }
             });
         }
-        alert(yes);
         return false;
     });
 });
+

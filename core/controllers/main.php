@@ -42,6 +42,9 @@
     function action_category(){
         renderView('category');
     }
+//    function action_send(){
+//        echo json_encode($_POST);
+//    }
 
     //function action_object(){
     //renderView('object');
@@ -50,6 +53,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     // TODO Обработать данные
 }
 //renderView('actionAdmin');
-
-
-
