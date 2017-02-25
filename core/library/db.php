@@ -15,7 +15,6 @@
     function  selectData($sql){
         $link = connectToDb();
         $res =  mysqli_query($link, $sql);
-
         return $res;
     }
 

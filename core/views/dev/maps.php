@@ -1,18 +1,13 @@
-<?php
-$jj='м дружбы народов киев';
-$xml = simplexml_load_file("http://maps.google.com/maps/api/geocode/xml?address=$jj");
-$status = $xml->status;
-$lat = $xml->result->geometry->location->lat;
-$lng = $xml->result->geometry->location->lng;
-?>
 <div class="opacity "></div>
 <div class="show-hide"><div class="cross-line"></div></div>
 <div id="dbMyLatLng" style="display:none">
-    <p> <?= $lat?> , <?=$lng?> , m</p>
-    <p><?= $lat?>, <?=$lng?>, zakrevskogo</p>
-    <p>-22.397, 150.644, otradnyi</p>
-    <p>-23.397, 150.644, nayki</p>
-    <p>-24.397, 150.644, vozdyhoflotskiy</p>
+<?php
+for($i=0;$i<=count($data['objects']);$i++):?>
+
+    <p>  <?= $data['objects'][$i]['lat']?>, <?= $data['objects'][$i]['lng']?> , <?= $data['objects'][$i]['square_meter']?>, <?= $data['objects'][$i]['price']?>,
+<?= $data['objects'][$i]['rooms']?>, <?=$data['objects'][$i]['city']?>, <?=$data['objectsSale'][$i]['street']?>,
+        <?=$data['objects'][$i]{'house_number'}?></p>
+    <?php endfor;?>
 </div>
 
 

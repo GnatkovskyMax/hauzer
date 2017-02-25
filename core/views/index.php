@@ -6,7 +6,6 @@ require 'dev/helper-panel.php';
 require_once 'dev/filter.php'
 ?>
     <section class="map hidden-xs">
-        <!--            <h1 class="offer">Объекты на карте</h1>-->
         <?php
         require_once 'dev/maps.php';
         ?>
@@ -45,23 +44,4 @@ require_once 'dev/filter.php'
         </div>
     </div>
 </section>
-
-
-<!--        <section class="scroll-sale">-->
-<!--            <h2 class="offer">Наши предложения продажи</h2>-->
-<!--            <div class="">-->
-<!--                <h3 class="offer-children">Топ</h3>-->
-<!--                --><?php
-//                include 'dev/topSale.php'
-//                ;?>
-<!--            </div>-->
-<!--            <div class="">-->
-<!--                <h3 class="offer-children">Последние добавленые</h3>-->
-<!--                --><?php
-//                include 'dev/recentSale.php'
-//                ;?>
-<!--            </div>-->
-<!--        </section>-->
-<!--    </section>-->
-
 </main>
