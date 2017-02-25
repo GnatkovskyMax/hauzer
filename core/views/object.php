@@ -46,12 +46,12 @@
 			</div>
 			<div class="col-md-6 catalog-img-wrap"><!--   -->
 				<div class="catalog-img slider-nav">
-					<div onClick='opendialog()'><img src="/assets/img/<?=$data['objects'][0]['img'] ?>.jpg"></div>
+					<div onClick='opendialog()'><img src="<?=$data['objects'][0]['img-top'] ?>"></div>
                     <?php
-                    $imegs = explode(',', $data['objects'][0]['img_object']);
+                    $imegs = explode(',', $data['objects'][0]['img']);
                     for ($i = 0; $i < count($imegs); $i++):
                     ?>
-                        <div onClick='opendialog()'><img src="/assets/img/<?=$imegs[$i]?>.jpg"></div>
+                        <div onClick='opendialog()'><img src="<?=$imegs[$i]?>"></div>
                      <?php endfor; ?>
 				</div>
 			</div>
@@ -70,7 +70,7 @@
     </section>
     	<div class="info-agent col-md-4">
 		<h2>Информация об агенете</h2>
-		<img class="disp" src="/assets/img/img_agents/2.png">
+		<img class="disp" src="<?=$data['objects'][0]['img_general'] ?>">
 		<div class="info disp">
 			<h3>Вини Мишка Медведев</h3>
 			<p>тел: 000-000-00-00</p>

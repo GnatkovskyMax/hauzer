@@ -5,15 +5,15 @@
 
   function action_object(){
         $ElId = getUrlSegment(2);
-        $El = mysqli_fetch_all(getIdSegment($ElId), MYSQLI_ASSOC);;
+        $El = mysqli_fetch_all(getIdSegment($ElId), MYSQLI_ASSOC);
+
         $cityOb = $El[0]['city'];
         $roomOb = $El[0]['rooms'];
         $priceOb = $El[0]['price'];
         $IdOb = $El[0]['id'];
 
-        $similarObjects = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
+      $similarObjects = mysqli_fetch_all(similarObject($cityOb, $roomOb, $priceOb, $IdOb), MYSQLI_ASSOC);
         renderView ('object', ['objects' => $El, 'similars' => $similarObjects] );
-
 //      $categoryName = getUrlSegment(2);
 //      if (is_null($categoryName)){               !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //          show404page();
