@@ -18,20 +18,28 @@
     <link rel="stylesheet" href="/assets/css/news.css">
     <link rel="stylesheet" href="/assets/css/output-position.css">
     <link rel="stylesheet" href="/assets/css/catalog.css">
+    <link rel="stylesheet" href="/assets/css/adminPanel.css">
 	<link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/assets/slick/slick/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="/assets/css/styl.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/helper-panel.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="/css/ion.rangeSlider.skinFlat.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+
 </head>
+<!--<body>-->
+<!--<div class='header'>-->
+<!--    <div class="container">-->
+<!--        <h1 class=' col-xs-12 col-sm-4 col-md-2 col-lg-2'></h1>-->
+<!--    </head>-->
 <body>
-<div class='header'>
-<div class="container">
-<h1 class=' col-xs-12 col-sm-4 col-md-2 col-lg-2'>
-HOUZEZ
+<div class='header container'>
+<div class="row">
+<h1 class=' col-xs-12 col-sm-4 col-md-2 col-lg-2 '>
+
 </h1>
 <div id='wrapp-nav-xs' class=' col-xs-7 col-xs-push-5 visible-xs'><!--   -->
 <div class='navxs'>

@@ -7,9 +7,7 @@ $('.select').children().each(function(index){
 
             var option_value=$(this).attr('value');
             $('<li></li>').html($(this).html()).attr('value',option_value ).on('click', function(){
-
                 $(this).parent().children().each(function(){
-                    console.log();
                     $(this).parent().parent().children().eq(0).children().removeAttr('selected', 'selected');
                     $(this).parent().parent().children().eq(0).children().filter("[value='"+option_value+"']").attr('selected', 'selected');
                     console.log();
@@ -46,12 +44,10 @@ function visibleDopFilter(){
 $('.adv').on('click', visibleDopFilter);
 $(window).on('scroll', scroll);
 function scroll(){
-    console.log('hhhh:'+$(window).scrollTop());
    var f =  $('#filter').offset();
     var ft = 39;
     if(ft<=$(window).scrollTop()){
         $('#filter').addClass('hh');
-        console.log(ft);
     }
     else if($(window).scrollTop()==0){
         $('#filter').removeClass('hh');

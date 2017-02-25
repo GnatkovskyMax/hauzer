@@ -10,7 +10,11 @@
         for ($i = 0; $i < count($data['similars']); $i++):
     ?>
                 <div class="img-wrapp col-md-3">
+                
                      <a class="element-shadow" href="/manual/object/<?= $data['similars'][$i]{'id'} ?>">
+                     <div class="img-wrapp-z-index">
+                         
+                   
                         <img src="/assets/img/<?=$data['similars'][$i]{'img'}?>.jpg" >
                         <div class="position show">
                             <h1><?= $data['similars'][$i]{'city'}?> &nbsp; <?=$data['similars'][$i]['street']?> &nbsp; <?=$data['similars'][$i]{'house_number'} ?> </h1>
@@ -28,6 +32,7 @@
                             </p>
 
                         </div>
+                          </div>
                     </a>
                 </div>
             <?php endfor;?>

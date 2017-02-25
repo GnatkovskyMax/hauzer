@@ -4,7 +4,7 @@
 	background-color:#20DC9C;
 	padding:0 15px;
 }
-form *{
+.filter-line form *{
     font-size: 1em;
 	border:none;
 	box-sizing:border-box;

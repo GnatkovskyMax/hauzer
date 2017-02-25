@@ -1,26 +1,42 @@
-
-body *{
-    font-family: Verdana !important;
-
-}
-body{
-    background: white !important;
-}
 .descriptionHauzez h1{
     text-align: center;
     border-bottom: 1px solid black;
 }
-
-.descriptionHauzez{
-    width: 82%;
-    margin: 0 auto;
-}
-
 .offer, .offers {
     background:orange;
     color:white;
-margin:10px auto;
-    padding: 0;
-    font-size: 46px;
-    text-align: center;
+    padding:5px;
+    font-size: 21px;
+}
+@media(min-width:768px){
+    body *{
+        font-family: Verdana !important;
+    }
+    .descriptionHauzez h1{
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .descriptionHauzez{
+        width: 82%;
+        margin: 0 auto;
+    }
+
+    .offer, .offers {
+
+        background:orange;
+        color:white;
+        margin:10px auto;
+        padding: 0;
+        font-size: 46px;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+.bootstrap-padding-none, .bootstrap-padding-none>div{
+    padding:0 !important;
+    box-sizing: border-box;
+}
+.overflow-hidden{
+    overflow:hidden;
 }

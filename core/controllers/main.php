@@ -2,7 +2,7 @@
     function action_index(){
         $serviceRent = 'Аренда';
         $serviceSale = 'Продажа';
-//        $objects = mysqli_fetch_all(findAllFromTable('objects'), MYSQLI_ASSOC);
+        $objects = mysqli_fetch_all(findAllFromTable('objects'), MYSQLI_ASSOC);
         $objectsFilter = mysqli_fetch_all(findFromForm(), MYSQLI_ASSOC);
 //        $arr = array();
 //        $a = 0;
@@ -33,7 +33,7 @@
 //        var_dump($recentSale);
         $topRent = mysqli_fetch_all(findAllObjectTopIndex($serviceRent), MYSQLI_ASSOC);
         $topSale = mysqli_fetch_all(findAllObjectTopIndex($serviceSale), MYSQLI_ASSOC);
-        renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'filter' => $objectsFilter, 'recentRent' =>$recentRent, 'recentSale' =>$recentSale]);
+        renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'filter' => $objectsFilter, 'recentRent' =>$recentRent, 'recentSale' =>$recentSale, 'objects'=>$objects]);
     }
 
     function action_contact(){
@@ -52,4 +52,11 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     // TODO Обработать данные
 }
+
 //renderView('actionAdmin');
+
+
+?>
+
+
+

@@ -1,8 +1,3 @@
-body{
-    background: #F3F3F3;
-    font-style: italic;
-}
-
 .wrap-slider{
     width: 100%;
     height: 580px;
@@ -158,11 +153,6 @@ body{
 .disp{
     display: inline-block;
 }
-
-main{
-    text-align: center;
-}
-
 .wrap-catalog{
     text-align: left;
 }
@@ -197,10 +187,6 @@ main{
     width:20%;
 }
 
-.section h1, .section-similar h1{
-    margin: 0;
-    font-size: 16px;
-}
 
 .section img, .section-similar img{
     width: 100%;
@@ -212,38 +198,38 @@ main{
     text-decoration: none;
     color: black;
 }
-.img-wrapp{
-    position: relative;
-    padding:2px;
-}
-.personal{
-    text-align: center;
-}
-.info-agents{
-    text-align: center;
-    margin: 0 auto;
-    font-size: 16px;
-    width: 18%;
-    background: #DDDDDD;
-    margin-right: 1%;
-}
 
-.info-agents:before{
-    margin-right: 0;
-}
+@media(min-width:768px){
+    .personal{
+        text-align: center;
+    }
+    .info-agents{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+        width: 18%;
+        background: #DDDDDD;
+        margin-right: 1%;
+    }
 
-.info-agents h2{
-    text-align: center;
-}
+    .info-agents:before{
+        margin-right: 0;
+    }
 
-.info-agents img{
-    border-radius: 50%;
-}
+    .info-agents h2{
+        text-align: center;
+    }
 
+    .info-agents img{
+        border-radius: 50%;
+    }
+
+
+
+}
 .info h3{
     margin: 0;
 }
-
 /*.info{*/
     /*vertical-align: top;*/
     /*margin-left: 5%;*/
