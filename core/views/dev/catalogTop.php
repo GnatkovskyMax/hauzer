@@ -2,7 +2,7 @@
 for ($i = 0; $i < count($data['allObjectsTop']); $i++):
     ?>
 <div class="slider-block">
-<img src="/assets/img/<?= $data['allObjectsTop'][$i]{'img'} ?>.jpg">
+<img src="<?= $data['allObjectsTop'][$i]{'img'} ?>" style="width:100%; height:100%">
     <section class="block"> <!--!!!!!!!!!!!!!!!!!-->
         <div class="disp vip-description">
             <h1><?= $data['allObjectsTop'][$i]['city'] ?> <?= $data['allObjectsTop'][$i]['district'] ?> район</h1>

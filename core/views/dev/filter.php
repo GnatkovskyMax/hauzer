@@ -1,15 +1,24 @@
 <div class="content  clearfix" id="filter">
         <div class="container">
+<!--            --><?php
+//                if (!empty($_GET['search-id'])){
+//                    $action = 'object';
+//                    var_dump($action);
+//                }else{
+//                    $action = 'catalogs';
+//                }
+//            ?>
 <form method="get" action="/manual/catalogs">
     <div class="filter-line">
 			<div class="col-xs-2 visible-xs adv-xs adv"></div>
         <div class="col-xs-8 col-sm-5 col-md-7 col-lg-77 input_parent">
             <div class="visible-direct-inputs"><span>^</span></div>
             <input type="text" name="search-address" placeholder="Введите адрес" class="filter-line-input active-input">
-            <input type="text" name="search-id" placeholder="Номер объекта" class="filter-line-input">
+            <input type="number" name="search-id" placeholder="Номер объекта" class="filter-line-input">
         </div>
         <div class="fifty col-sm-7 col-md-5 col-lg-55">
         <div class="hidden-xs col-sm-2 select adva-wrapp">
+
 <!--            <select name="raen" >-->
 <!--                <option value="all">Все раены</option>-->
 <!--            --><?php

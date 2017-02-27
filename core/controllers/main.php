@@ -29,7 +29,8 @@
 //        $arra = array_unshift($arr, "Киев");
 //        var_dump($arr);
         $recentRent = mysqli_fetch_all(findAllObjectRecent($serviceRent), MYSQLI_ASSOC);
-        $recentSale = mysqli_fetch_all(findAllObjectRecent($serviceRent), MYSQLI_ASSOC);
+        $recentSale = mysqli_fetch_all(findAllObjectRecent($serviceSale), MYSQLI_ASSOC);
+//        var_dump($recentSale);
         $topRent = mysqli_fetch_all(findAllObjectTopIndex($serviceRent), MYSQLI_ASSOC);
         $topSale = mysqli_fetch_all(findAllObjectTopIndex($serviceSale), MYSQLI_ASSOC);
         renderView('index', ['objectsRent' => $topRent, 'objectsSale' => $topSale, 'filter' => $objectsFilter, 'recentRent' =>$recentRent, 'recentSale' =>$recentSale, 'objects'=>$objects]);
@@ -41,6 +42,9 @@
     function action_category(){
         renderView('category');
     }
+//    function action_send(){
+//        echo json_encode($_POST);
+//    }
 
     //function action_object(){
     //renderView('object');
@@ -48,6 +52,9 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     // TODO Обработать данные
 }
+
+//renderView('actionAdmin');
+
 
 ?>
 

@@ -8,7 +8,7 @@
                 <a class="overflow-hidden" href="/manual/object/<?= $data['objectsSale'][$i]{'id'} ?>"><!--element-shadow-->
                     <div class="img-wrapp-z-index">
                     </div>
-                    <img src="/assets/img/header2.jpg" >
+                    <img src="<?= $data['objectsSale'][$i]{'img'} ?>" >
                     <div class="position ">
                         <h1><?= $data['objectsSale'][$i]{'city'}?> &nbsp; <?=$data['objectsSale'][$i]['street']?> &nbsp; <?=$data['objectsSale'][$i]{'house_number'} ?> </h1>
                         <p>
@@ -23,6 +23,7 @@
                     </div>
                 </a>
             </div>
+
         </div>
     <?php endfor; ?>
 </div>

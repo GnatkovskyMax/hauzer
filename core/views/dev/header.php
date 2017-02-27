@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/areset.css">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
 	<link rel="stylesheet" href="/assets/css/slider.css">
 	<link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -26,12 +27,14 @@
     <link rel="stylesheet" href="/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="/css/ion.rangeSlider.skinFlat.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    </head>
+
+
+</head>
 <body>
 <div class='header container'>
 <div class="row">
 <h1 class=' col-xs-12 col-sm-4 col-md-2 col-lg-2 '>
-HOUZEZ
+HAUZER
 </h1>
 <div id='wrapp-nav-xs' class=' col-xs-7 col-xs-push-5 visible-xs'><!--   -->
 <div class='navxs'>
@@ -41,7 +44,7 @@ HOUZEZ
 </div>
 </div>
 	<span class=" phone col-xs-5 col-xs-pull-7 col-md-2 col-md-push-8 col-lg-2 col-lg-push-8 hidden-sm">+38-063-943-78-05</span>
-<?php require 'nav.php' ?>
+<?php require 'nav.php'?>
 </div>
 </div>
 

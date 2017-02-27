@@ -1,8 +1,20 @@
+.descriptionHauzez{
+    font-size: 1.8rem;
+    color:slategrey;
+}
 .descriptionHauzez h1{
     text-align: center;
-    border-bottom: 1px solid black;
+    font-family: "verdana";
+}
+.recent{
+    font-size: 2rem;
+    text-align:center;
+    color:grey;
+    margin:0;
+    padding:0;
 }
 .offer, .offers {
+    text-align: center;
     background:orange;
     color:white;
     padding:5px;
@@ -13,8 +25,7 @@
         font-family: Verdana !important;
     }
     .descriptionHauzez h1{
-        text-align: center;
-        border-bottom: 1px solid black;
+
     }
 
     .descriptionHauzez{

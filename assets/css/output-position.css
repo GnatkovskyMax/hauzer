@@ -3,6 +3,22 @@
     margin-top:4px;
     margin-bottom:4px;
 }
+.load, .loadSale{
+    border:none;
+    outline:none;
+    width:35px;
+    height:35px;
+    border-radius:2000px;
+    background: lightgrey;
+    color:orange;
+    font-size: 1.3rem;
+}
+.load:hover, .loadSale:hover{
+
+    background: orange;
+    color:lightgrey;
+    font-size: 1.4rem;
+}
 .position p, .position-recent p{
     font-size:1.1rem;
     line-height:.8rem;
@@ -53,6 +69,9 @@
     position:relative;
 }
 @media(min-width:768px){
+    .forBtn{
+        margin-top:30px;
+    }
     .top-label{
         position:absolute;
         top:-15px;

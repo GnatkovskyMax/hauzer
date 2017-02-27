@@ -27,23 +27,26 @@
 }
 
 .block {
-    width: 514px;
-    height: 211px;
+    position:relative;
+    width: 450px;
+    height:180px;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.6);
-    top: 315px;
+    top: 250px;
     left: 300px;
-    padding: 20px;
+    padding: 5px 2px 5px 15px  ;
+    border-radius:5px;
 }
 
 .block a{
     position: absolute;
-    left:404px;
-    top: 171px;
-    padding: 10px 15px;
+    right:5px;
+    bottom: 5px;
+    padding: 7px 10px;
     text-decoration: none;
     color: white;
-    background: #FF945E;
+    background: orange;
+    border-radius:5px;
 }
 
 .vip-description{

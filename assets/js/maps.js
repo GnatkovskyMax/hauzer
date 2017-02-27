@@ -7,9 +7,9 @@ $('.show-hide').on('click',function(){
 });
 $(window).on('load',
 function() {
-    var myLatlng = new google.maps.LatLng(-20.397, 150.644);
+    var myLatlng = new google.maps.LatLng(50.501806, 30.610601);
     var myOptions = {
-        zoom: 7,
+        zoom: 11,
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -37,11 +37,13 @@ function() {
         });
         markers.push(marker);
         var info = '<div id="info-wrapp">' +
-            '<div><a href="/main/index/'+id+'">jjj</a></div>'+
+            '<div><a href="/manual/object/'+lat_Lng[2]+'">jjj</a></div>'+
             '<div class="marker-info">' +
-            '<p>'+lat_Lng[2]+'</p>' +
-            '<p>'+lat_Lng[2]+'</p>' +
-            '<p>'+lat_Lng[2]+'</p>' +
+            '<img src="'+lat_Lng[3]+'">' +
+            '<p>'+lat_Lng[4]+'</p>' +
+            '<p>'+lat_Lng[5]+'</p>' +
+            '<p>'+lat_Lng[6]+'hh</p>' +
+            '<p>'+lat_Lng[7]+'hh</p>' +
             '</div>'
             '</div>'
         makeInfoWin(marker,info);

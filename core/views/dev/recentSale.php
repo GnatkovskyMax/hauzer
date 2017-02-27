@@ -1,6 +1,7 @@
 
 <div class=" bootstrap-padding-none wrapp-parent col-xs-12 col-sm-12 col-md-5 col-lg-5 recent">
-    <?php
+    <h2 class="recent">Последние добавленые <span class="visible-xs">продажа</span></h2>
+            <?php
     for ($i = 0; $i < count($data['objectsSale']); $i++):
         ?>
         <div class="img-wrapp col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -21,11 +22,8 @@
                     </div>
                 </a>
             </div>
+
         </div>
     <?php endfor;
     ?>
 </div>
-
-
-
-

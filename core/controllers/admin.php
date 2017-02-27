@@ -1,10 +1,42 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Max
- * Date: 21.02.2017
- * Time: 3:13
- */
+
+function action_login(){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $login = valid_adress(htmlspecialchars(trim($_POST['login'])));
+        $password = valid_adress(htmlspecialchars(trim($_POST['password'])));
+        $resEntranceAdmin = entranceAdmin($login, $password);
+        if($resEntranceAdmin -> num_rows === 0){
+            echo "Incorect login or password";
+        }else{
+            $_SESSION['user'] = mysqli_fetch_assoc($resEntranceAdmin);
+            header('location: /admin/admin');
+        }
+    }
+    renderView('login');
+}
+function action_admin(){
+    if(is_auth()){
+        $arrService = ['Аренда','Продажа','Сдано','Продано'];
+        $adminCountObgect = array();
+        $i = 0;
+        foreach ($arrService as $value){
+            $res = count(mysqli_fetch_all(adminCountObgect($value), MYSQLI_ASSOC));
+                $adminCountObgect[$i][$value] = $res;
+                $i++;
+        }
+        $adminObjects = mysqli_fetch_all(selectObjects(), MYSQLI_ASSOC);
+        $adminCountObgect[4]['all'] =count($adminObjects);
+        renderView('admin', ['objects' => $adminObjects, 'count' => $adminCountObgect]);
+    }else{
+        header('location: /');
+    }
+}
+function action_logaut(){
+    session_unset();
+    session_destroy();
+    header('location: /');
+}
+
 function action_addObject(){
 //if(is_dir('catalog/'.$_POST['address'])){
 //    echo 'hello';
@@ -89,17 +121,23 @@ function action_addObject(){
         echo 'последний:'.$last;
 if($res==true&&$_FILES["image0"]["name"]!=''){
     $img='';
+    $g='';
     $d = opendir("catalog");
     mkdir('catalog/'.$last,0755,true);
     $opendir= opendir('catalog/'.$last);
     $f = fopen('catalog/file_catalog.php', "a+");
     for($i=0;!empty($_FILES["image$i"]);$i++){
-        if(+$_POST['general']==$i ){$g='general';
-            $img_general= "/catalog/$last/".$g.time().$_FILES["image$i"]["name"];
-        }
-        else{$g='';
+        if($_POST['general'] != NULL ){
+            if(+$_POST['general']==$i ){
+                $g='general';
+                $img_general= "/catalog/$last/".$g.time().$_FILES["image$i"]["name"];
+            }else{$g='';
+                $img= $img."/catalog/$last/".$g.time().$_FILES["image$i"]["name"].' ,';
+            }
+        }else{$g='';
             $img= $img."/catalog/$last/".$g.time().$_FILES["image$i"]["name"].' ,';
         }
+
         $name_files = "catalog/$last/".$g.time().$_FILES["image$i"]["name"];
  move_uploaded_file($_FILES["image$i"]["tmp_name"], $name_files);
  fwrite($f,$g.time().$_FILES["image$i"]["name"].":".$_POST["alt$i"]."\n");
@@ -177,3 +215,4 @@ if($res==true&&$_FILES["image0"]["name"]!=''){
         renderView('dev/addObject');
     }
 }
+

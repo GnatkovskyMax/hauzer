@@ -9,7 +9,7 @@ $('body').on('mouseover mouseout click',function(e){
 else if(object.className=="load"&&e.type=="click"){
 
             var jm= +($(object).text()-1);
-            $.get("/manual/catalogs",
+            $.get("/ajax/catalogs",
                 {m: jm}, function(data){
                     data = $(data);
                     $(".wrap-catalog.rent").html($('.wrap-catalog.rent', data).html());
@@ -20,7 +20,7 @@ else if(object.className=="load"&&e.type=="click"){
     }
     else if(object.className=="loadSale"&&e.type=="click"){
         var j= +($(object).text()-1);
-        $.get("/manual/catalogs",
+        $.get("/ajax/catalogs",
             {s: j}, function(data){
                 data = $(data);
                 $(".wrap-catalog.sale").html($('.wrap-catalog.sale', data).html());

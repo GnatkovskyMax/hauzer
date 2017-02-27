@@ -164,7 +164,7 @@ border-radius: 5px 5px 0 0 ;
 	border-radius:7px;
     position:relative;
 }
-select{
+#filter select{
 	display:none;
 }
 .adv-xs{
@@ -285,6 +285,7 @@ background: url('/assets/img/ser.png')no-repeat center center ;
         line-height:45px;
     }
     .filter-line button{
+        border: none;
         height:45px;
     }
 
