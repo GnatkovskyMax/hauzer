@@ -8,7 +8,7 @@ $('body').on('mouseover mouseout click',function(e){
     }
 else if(object.className=="load"&&e.type=="click"){
 
-            var jm= +($(object).text()-1);
+            var jm= +($(object).text()-1)*8;
             $.get("/ajax/catalogs",
                 {m: jm}, function(data){
                     data = $(data);
@@ -19,7 +19,7 @@ else if(object.className=="load"&&e.type=="click"){
 
     }
     else if(object.className=="loadSale"&&e.type=="click"){
-        var j= +($(object).text()-1);
+        var j= +($(object).text()-1)*8;
         $.get("/ajax/catalogs",
             {s: j}, function(data){
                 data = $(data);

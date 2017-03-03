@@ -20,7 +20,7 @@
          return selectData($sql);
 }
      function findAllFromTableRent($catId, $service, $load){
-        $sql = "SELECT * FROM $catId WHERE `service` = '$service' ORDER BY id LIMIT $load, 4 ;";
+        $sql = "SELECT * FROM $catId WHERE `service` = '$service' ORDER BY id LIMIT $load, 8 ;";
         return selectData($sql);
 }
      /* function allObjects(){

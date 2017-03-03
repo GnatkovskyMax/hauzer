@@ -59,7 +59,11 @@ $('.helper-panel').on('click',function (e) {
          $('body').animate({ scrollTop: 0 }, 600);
          return false;
          break;
+     case "helper-btn similarObj":
+         var sale = $('.similar-scroll').offset().top;
+        $('body').animate({ scrollTop: sale }, 600);
+        return false;
+        break;
+
 }
-
-
 });

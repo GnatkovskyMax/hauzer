@@ -95,6 +95,13 @@
      background-position: -91px -29px;
 
  }
+ .similarObj{
+     background: url('/assets/img/similar.png') no-repeat -1px 0;
+ }
+.similarObj:active{
+      background-position: -1px -31px;
+
+  }
 .helper-btn{
     background-color:#20DC9C;
 }

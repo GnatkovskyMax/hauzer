@@ -43,6 +43,11 @@
         <div class="col-xs-12 col-md-12 col-lg-12 forBtn">
         <?php
         $btn= count($data['btnRent']) ;
+        if($btn%8==0){
+            $btn=$btn/8;
+        }else{
+            $btn=($btn/8)+1;
+        }
         for ($i = 1; $i <= $btn; $i++):
         ?>
         <button class="load" ><?=$i?></button>

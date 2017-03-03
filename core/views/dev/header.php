@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/areset.css">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/partObject.css">
     <link rel="stylesheet" href="/assets/css/admin.css">
 	<link rel="stylesheet" href="/assets/css/slider.css">
 	<link rel="stylesheet" href="/assets/css/styles.css">

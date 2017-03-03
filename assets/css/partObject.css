@@ -1,0 +1,28 @@
+.descr *,.descr{
+    color:slategrey ;
+    font-size: 12px;
+    line-height: 15px;
+    padding:0 5px;
+}
+section#catalog-info{
+    text-align:left;
+    padding:0;
+}
+.head-description {
+    text-align:center;
+    margin-top:5px;
+    font-size: 15px;
+    background-color:#20DC9C;
+    color:white;
+    padding:3px 2px;
+    border-radius: 5px;
+}
+.for-img{
+    min-height:150px;
+    max-height:350px;
+    overflow:hidden;
+}
+.for-img img{
+    height:100%;
+    width:100%;
+}

@@ -1,7 +1,12 @@
+<?php
+if(count($data['similars'])>0){
+    $s=true;
+?>
 <section class="section container">
-    <h2>Похожие</h2>
+
     <div class="row">
         <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 bootstrap-padding-none wrapp-parent">
+            <h2 class="head-description similar-scroll"><span>Похожие</span></h2>
             <?php
             for ($i = 0; $i < count($data['similars']); $i++):
                 ?>
@@ -45,5 +50,6 @@
         </div>
     </div>
 </section>
-</div>
-</section>
+    <?php
+}
+?>

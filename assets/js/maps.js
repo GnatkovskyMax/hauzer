@@ -75,13 +75,14 @@ function toggleBounce(){
         this.setAnimation(google.maps.Animation.BOUNCE);
     }
 }
-// function fun(){
-
-//     var de = '<a href="http://maps.googleapis.com/maps/api/geocode/json?address=kiev&sensor=false&language=ru">kkkkkkkkk</a>';
-//     $('#filter').append(de);
-// }
-
-// $('a').on('click',function(e){
-//     e.preventDefault();
-// });
+function mapHeight(){
+    if($('#catalog-info').height()<=200){
+ $('#map').height(200);
+    }else{
+        $('#map').height($('#catalog-info').height());
+    }
+}
+if($('section').is($('#catalog-info'))){
+    mapHeight();
+}
 
